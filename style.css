@@ -11,11 +11,15 @@ Text Domain: themesamuelgiroux
 */
 /* https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/ */
 :root {
-  --couleur-arriere-entete: #618aad;
-  --couleur-arriere-accueil: #0f0;
-  --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: rgb(223, 230, 42);
-  --couleur-arriere-footer: #630;
+    --couleur-arriere-entete : rgb(59, 124, 181, 1);;
+    --couleur-arriere-accueil : rgb(8, 205, 14, 1);
+    --couleur-arriere-evenement : rgba(166, 3, 215, 1);
+    --couleur-arriere-galerie : rgba(255, 162, 0, 1);
+    --couleur-arriere-footer : rgba(167, 44, 0, 1);
+
+    /*Niveau de transparence des h */
+    --transparence-h1: 0,4;
+    --transparence-section: 0.5;
 }
 
 * {
@@ -35,11 +39,22 @@ body {
   min-height: 40vh;
 }
 
-.global > section,
+.global > section {
+  flex: 0 1 900px;
+  padding: 3rem 4rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .global > header,
 .global > footer {
   flex: 0 1 900px;
-  border: 1px solid #aaa;
+  padding: 3rem 2rem;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#entete, #footer {
+  min-height: 20vh;
 }
 
 #entete {
@@ -67,12 +82,14 @@ https://chrisburnell.com/clamp-calculator/
 */
 h1 {
   font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  color: rgba(0, 0, 0, 0.2);
   font-weight: 600;
   font-style: normal;
 }
 
 h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+  color: rgba(21, 0, 114, 0.8);
   font-weight: 500;
   font-style: normal;
 }/*# sourceMappingURL=style.css.map */
