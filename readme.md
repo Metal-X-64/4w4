@@ -13,5 +13,5 @@ Fonctions css
 
 ### Utiliser la fonction hsl
 ### Intégrer les vagues
-### Intégrer une diagona;
+### Intégrer une diagonal
 

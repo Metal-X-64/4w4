@@ -1,15 +1,76 @@
 :root {
+    /*
     --couleur-arriere-entete : rgb(59, 124, 181, 1);;
     --couleur-arriere-accueil : rgb(8, 205, 14, 1);
     --couleur-arriere-evenement : rgba(166, 3, 215, 1);
     --couleur-arriere-galerie : rgba(255, 162, 0, 1);
     --couleur-arriere-footer : rgba(167, 44, 0, 1);
 
-    /*Niveau de transparence des h */
+    /*Niveau de transparence des h
     --transparence-h1: 0,4;
     // Transparence section
     --transparence-section : 0.1;
     
     // Largeur de la zone centrale
     --largeur-zone-centrale : 1;
+
+    */
+    /*
+    // Calcul des teintes
+    --u1 : 180; // couleur initiale
+    --u2 : calc(var(--u1)+ 180); // couleur complémentaire
+    --u3 : calc(var(--u2) - 30); // couleur analogue gauche
+    --u4 : calc(var(--u1) + 30); // couleur analogue droite
+    // La saturation
+    --s-arriere : 100%;
+    --s-avant : 50%;
+    // La luminosité
+    --l-arriere : 30%;
+    --l-avant : 20%;
+    // couleur arrière plan - background-color
+    --couleur-arriere-entete : hsl(var(--u1),var(--s-arriere), var(--l-arriere));
+    // --couleur-arriere-accueil : hsl(var(--u2),var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-accueil: hsl(var(--u2),var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-evenement : hsl(var(--u3),var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-galerie : hsl(var(--u4),var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-footer : hsl(var(--u1),var(--s-arriere), var(--l-arriere));
+
+    // couleur avant plan - color
+    --couleur-entete : hsl(var(--u1),var(--s-avant), var(--l-avant));
+    --couleur-accueil : hsl(var(--u2),var(--s-avant), var(--l-avant));
+    --couleur-evenement : hsl(var(--u3),var(--s-avant), var(--l-avant));
+    --couleur-galerie : hsl(var(--u4),var(--s-avant), var(--l-avant));
+    --couleur-footer : hsl(var(--u1),var(--s-avant), var(--l-avant));
+    */
+
+    --nb-element : 5;
+    --increment-angle : calc(360 / var(--nb-element));
+    /* 360/5 = 72) */
+    --angle-initial : 180;
+    /* couleur arrière plan */
+    --s-couleur-arriere : 100%; // saturation
+    --l-couleur-arriere : 50%;  // luminosité
+    /* couleur avant plan */
+    --s-couleur : 100%; // saturation
+    --l-couleur : 15%; // luminosité
+
+    --hu1 : var(--angle-initial);
+    --hu2 : calc(var(--hu1) + var(--increment-angle));
+    --hu3 : calc(var(--hu2) + var(--increment-angle));
+    --hu4 : calc(var(--hu3) + var(--increment-angle));
+    --hu5 : calc(var(--hu4) + var(--increment-angle));
+
+
+
+    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-accueil: hsl(var(--hu2),var(--s-couleur-arriere),  var(--l-couleur-arriere));
+    --couleur-arriere-evenement: hsl(var(--hu3),var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-galerie: hsl(var(--hu4),var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-footer: hsl(var(--hu5),var(--s-couleur-arriere), var(--l-couleur-arriere));
+
+    --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-accueil: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
+    --couleur-evenement: hsl(var(--hu3), var(--s-couleur),var(--l-couleur));
+    --couleur-galerie: hsl(var(--hu4), var(--s-couleur),var(--l-couleur));
+    --couleur-footer: hsl(var(--hu5), var(--s-couleur),var(--l-couleur));
 }
