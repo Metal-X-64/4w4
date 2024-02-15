@@ -15,29 +15,74 @@ body {
     min-height: 40vh;
 }
 
+.global > section {
+    flex: 0 1 900px;
+    padding: 3rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
 .global > section,
 .global > header,
 .global > footer {
     flex: 0 1 900px;
-    border: 1px solid #aaa;
+    // border: 1px solid #aaa;
+    padding: 4rem 1rem;
+    // background-color: rgba(0,0,0, 0.1);
+    background-color: rgba(255,255,255, var(--transparence-section));
+}
+
+#entete, #footer {
+    min-height: 20vh;
 }
 
 #entete{
     background-color: var(--couleur-arriere-entete);
+    position: relative;
+    color: var(--couleur-entete);
+    text-shadow: 5px 4px 2px black;
+}
+
+#ente > h1 {
+    box-shadow: 1rem;
 }
 
 #accueil{
     background-color: var(--couleur-arriere-accueil);
+    color :var(--couleur-accueil);
 }
 
 #evenement{
     background-color: var(--couleur-arriere-evenement);
+    color :var(--couleur-evenement);
 }
 
 #galerie{
     background-color: var(--couleur-arriere-galerie);
+    color :var(--couleur-galerie);
+    position: relative;
 }
 
 #footer{
     background-color: var(--couleur-arriere-footer);
+    color :var(--couleur-footer);
+    // position: relative;
+}
+
+button {
+    padding: 1.7rem;
+    margin: 1rem;
+    border: 2px solid black;
+    background-color: var(--couleur-bouton);
+    border-radius: 1rem;
+    text-align: center;
+    
+}
+
+button:hover {
+    padding: 1.7rem;
+    border: 2px solid black;
+    background-color: var(--couleur-bouton-hover);
+    border-radius: 1rem;
+    color: var(--couleur-bouton);
+    cursor: pointer;
 }
