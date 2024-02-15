@@ -28,9 +28,9 @@ Text Domain: themesamuelgiroux
 
   */
   --hu1: 180;
-  --hu2: calc(var(--hu1) + 180);
-  --hu3: calc(var(--hu2) - 30);
-  --hu4: calc(var(--hu1) + 30);
+  --hu2: calc(var(--hu1) + 30);
+  --hu3: calc(var(--hu1) - 20);
+  --hu4: calc(var(--hu1) + 10);
   --s-arriere: 100%;
   --s-avant: 50%;
   --l-arriere: 30%;
@@ -45,6 +45,18 @@ Text Domain: themesamuelgiroux
   --couleur-evenement: hsl(var(--hu3),var(--s-avant), var(--l-avant));
   --couleur-galerie: hsl(var(--hu4),var(--s-avant), var(--l-avant));
   --couleur-footer: hsl(var(--hu1),var(--s-avant), var(--l-avant));
+  --couleur-arriere-entete: hsl(var(--hu1), 100%, 70%);
+  --couleur-arriere-accueil: hsl(var(--hu2), 100%, 40%);
+  --couleur-arriere-footer: hsl(var(--hu1), 100%, 70%);
+  --couleur-arriere-evenement: var(--couleur-arriere-accueil);
+  --couleur-arriere-galerie: var(--couleur-arriere-accueil);
+  --couleur-entete: hsl(var(--hu1), 100%, 20%);
+  --couleur-accueil: hsl(var(--hu2), 100%, 85%);
+  --couleur-evenement: hsl(var(--hu3), 100%, 30%);
+  --couleur-galerie: hsl(var(--hu4), 100%, 75%);
+  --couleur-footer: hsl(var(--hu1), 100%, 10%);
+  --couleur-bouton: hsl(var(--hu2), 100%, 40%);
+  --couleur-bouton-hover: hsl(var(--hu2), 100%, 20%);
 }
 
 * {
@@ -84,8 +96,13 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
-  color: var(--couleur-entete);
   position: relative;
+  color: var(--couleur-entete);
+  text-shadow: 5px 4px 2px black;
+}
+
+#ente > h1 {
+  box-shadow: 1rem;
 }
 
 #accueil {
@@ -109,11 +126,30 @@ body {
   color: var(--couleur-footer);
 }
 
+button {
+  padding: 1.7rem;
+  margin: 1rem;
+  border: 2px solid black;
+  background-color: var(--couleur-bouton);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+button:hover {
+  padding: 1.7rem;
+  border: 2px solid black;
+  background-color: var(--couleur-bouton-hover);
+  border-radius: 1rem;
+  color: var(--couleur-bouton);
+  cursor: pointer;
+}
+
 /*
 https://chrisburnell.com/clamp-calculator/
 */
 h1 {
   font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  letter-spacing: -3;
   font-weight: 600;
   font-style: normal;
 }
@@ -125,7 +161,8 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(0.75rem, 0.663rem + 0.4348vi, 1rem);
+  padding-top: 2rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: 300;
   font-style: normal;
 }
@@ -148,6 +185,28 @@ h6 {
   font-style: normal;
 }
 
+/*
+.vague {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.vague svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 146px;
+}
+
+.vague .shape-fill {
+    fill: var(--couleur-arriere-entete);
+}
+*/
 .vague {
   position: absolute;
   bottom: 0;
@@ -161,10 +220,31 @@ h6 {
 .vague svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
-  height: 146px;
+  width: calc(132% + 1.3px);
+  height: 64px;
 }
 
 .vague .shape-fill {
-  fill: var(--couleur-arriere-entete);
+  fill: #FFFFFF;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  /*
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  */
+  inset: 0;
+  background-color: var(--couleur-arriere-entete);
+  z-index: -1;
+  transform: skewY(-5deg);
 }/*# sourceMappingURL=style.css.map */
