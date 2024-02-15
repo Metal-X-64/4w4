@@ -57,6 +57,7 @@ Text Domain: themesamuelgiroux
   --couleur-footer: hsl(var(--hu1), 100%, 10%);
   --couleur-bouton: hsl(var(--hu2), 100%, 40%);
   --couleur-bouton-hover: hsl(var(--hu2), 100%, 20%);
+  --couleur-blockquote: hsl(var(--hu2), 100%, 60%);
 }
 
 * {
@@ -124,6 +125,13 @@ body {
 #footer {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
+}
+
+blockquote {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  background-color: var(--couleur-blockquote);
 }
 
 button {
