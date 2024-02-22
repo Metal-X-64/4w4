@@ -1,0 +1,14 @@
+.entete__header {
+    background-image: url("images/wordpress-theme.png");
+    background-repeat: no-repeat;
+    background-position: 95% 40%;
+}
+
+//Écran format téléphone/tablette
+@media screen and (max-width: 992px) {
+
+    .entete__header {
+        background-position: center;
+        background-position: 50% 40%;
+    }
+}
