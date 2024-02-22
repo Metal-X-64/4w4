@@ -24,26 +24,31 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-    flex: 0 1 900px;
+    flex: 0 1 1100px;
     // border: 1px solid #aaa;
     padding: 4rem 1rem;
     // background-color: rgba(0,0,0, 0.1);
     background-color: rgba(255,255,255, var(--transparence-section));
 }
 
+.global > header {
+    flex: 1;
+}
+
 #entete, #footer {
     min-height: 20vh;
 }
 
-#entete{
+#entete {
     background-color: var(--couleur-arriere-entete);
     position: relative;
     color: var(--couleur-entete);
-    text-shadow: 5px 4px 2px black;
+    min-height: 60vh;
 }
 
-#ente > h1 {
+header > h1 {
     box-shadow: 1rem;
+    text-shadow: 5px 4px 2px black;
 }
 
 #accueil{
@@ -75,7 +80,7 @@ blockquote {
     background-color: var(--couleur-blockquote);
 }
 
-button {
+/* button {
     padding: 1.7rem;
     margin: 1rem;
     border: 2px solid black;
@@ -92,4 +97,22 @@ button:hover {
     border-radius: 1rem;
     color: var(--couleur-bouton);
     cursor: pointer;
+} */
+
+//Écran format téléphone/tablette
+@media screen and (max-width: 992px) {
+
+    .global > header {
+        text-align: center;
+        min-height: 50vh;
+    }
+
+    .global > footer {
+        text-align: center;
+    }
+
+    header > .espace {
+        padding-top: 12rem;
+    }
+
 }
