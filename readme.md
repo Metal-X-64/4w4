@@ -1,3 +1,6 @@
+## Auteur :
+- Samuel Giroux
+
 # Labo #3
 ### Création d'un site WP.
 - Adaptation du thème de exercice #1
@@ -24,6 +27,10 @@
 - Organisation du code, 3 commits minimum (1 point)
 - Résultat sous forme de github page (0.5 points)
 - Design global de la page (0.5 points)
+
+# Réalisations
+- Décomposition du titre de chaque cours (Séparer le sigle et durée du titre)
+- Création de 4 colonnes de cours dans l'accueil
 
 ## Lien du site web:
 https://metal-x-64.github.io/4w4/

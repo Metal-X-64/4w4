@@ -33,6 +33,7 @@
     <div id="accueil" class="global">
         <section>
             <h2>Accueil (h2)</h2>
+            <div class="cours">
             <?php
                 /*if (have_posts()) {
                     while(have_posts()) {
@@ -43,15 +44,28 @@
                     }
                 }*/
                 if (have_posts()):
-                    while(have_posts()): the_post();?>
+                    while(have_posts()): the_post();
+                    $titre = get_the_title();
+                    //$titreseulement = substr($titre,8,15);
+                    $sigle = substr($titre,0,7);
+                    $duree = substr($titre,-5,5);
+                    //$titre = 
+                    //strpos()
+                    
+                    ?>
                     <div class="carte">
-                        <h3><?php the_title(); ?></h3>
+                        <p><?php echo $sigle; ?></p>
+                        <!-- <h3><?php echo $titreseulement; ?></h3> -->
+                        <h3><?php echo $titre; ?></h3>
                         <p><?php echo wp_trim_words(get_the_content(),30); ?></p>
+                        <p><?php echo $duree; ?></p>
                     </div>
                 <?php endwhile ?>
                 <?php endif; ?>
+                </div>
             
             <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit, optio exercitationem quos unde excepturi. Alias, aspernatur. Culpa expedita modi, rem, distinctio enim placeat tempora officia mollitia, odit vitae soluta."</blockquote>
+                
         </section>
     </div>
     <div id="evenement" class="global diagonal">
