@@ -30,7 +30,8 @@
 
 # Réalisations
 - Décomposition du titre de chaque cours (Séparer le sigle et durée du titre)
-- Création de 4 colonnes de cours dans l'accueil
+- Création des colonnes de cours dans l'accueil
+- Changement du nombre de colonnes pour chaque résolution d'écran (Téléphone, tablette, ordinateur)
 
 ## Lien du site web:
 https://metal-x-64.github.io/4w4/

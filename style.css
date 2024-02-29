@@ -62,6 +62,8 @@ Text Domain: themesamuelgiroux
   --couleur-lien: hsl(var(--hu2), 100%, 60%);
   --couleur-lien-hover: hsl(var(--hu2), 100%, 50%);
   --couleur-lien-visited: hsl(var(--hu2), 100%, 70%);
+  --couleur-carte: hsl(var(--hu2), 100%, 80%);
+  --couleur-arriere-carte: hsl(var(--hu2), 100%, 50%);
 }
 
 * {
@@ -161,7 +163,7 @@ button:hover {
     color: var(--couleur-bouton);
     cursor: pointer;
 } */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 820px) {
   .global > header {
     text-align: center;
     min-height: 50vh;
@@ -325,12 +327,65 @@ a:hover {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1rem;
+  align-content: center;
 }
 
 .carte {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 0 1 20%;
+  flex: 1 1 60%;
+  color: var(--couleur-carte);
+  background-color: var(--couleur-arriere-carte);
   border: 1px solid #aaa;
+  padding: 1rem;
+}
+
+.carte > h3 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.carte > h4 {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 820px) {
+  .cours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-content: center;
+  }
+  .carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 20%;
+    color: var(--couleur-carte);
+    background-color: var(--couleur-arriere-carte);
+    border: 1px solid #aaa;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 570px) {
+  .cours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-content: center;
+  }
+  .carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 20%;
+    color: var(--couleur-carte);
+    background-color: var(--couleur-arriere-carte);
+    border: 1px solid #aaa;
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
