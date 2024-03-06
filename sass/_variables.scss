@@ -78,7 +78,12 @@
     --couleur-lien-hover: hsl(var(--hu2), 100%, 50%);
     --couleur-lien-visited: hsl(var(--hu2), 100%, 70%);
 
-    --couleur-carte: hsl(var(--hu2), 100%, 80%);
-    --couleur-arriere-carte: hsl(var(--hu2), 100%, 50%);
+    //--couleur-carte: hsl(var(--hu2), 100%, 80%);
+    //--couleur-arriere-carte: hsl(var(--hu2), 100%, 50%);
     
+}
+
+.carte {
+    --_couleur: hsl(var(--hu2), 100%, 80%);
+    --_couleur-arriere: hsl(var(--hu2), 100%, 50%);
 }

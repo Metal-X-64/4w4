@@ -3,16 +3,15 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1rem;
-    align-content: center;
 }
 
 .carte {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex: 1 1 60%;
-    color: var(--couleur-carte);
-    background-color: var(--couleur-arriere-carte);
+    justify-content: center;
+    flex: 1 0 calc(820px/4);
+    color: var(--_couleur);
+    background-color: var(--_couleur-arriere);
     border: 1px solid #aaa;
     padding: 1rem;
 }
@@ -27,7 +26,7 @@
     font-weight: 500;
 }
 
-//Rédolution tablette
+/* //Rédolution tablette
 @media screen and (min-width: 820px) {
 
     .cours {
@@ -73,4 +72,4 @@
         padding: 1rem;
     }
 
-}
+} */
