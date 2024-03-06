@@ -62,8 +62,14 @@ Text Domain: themesamuelgiroux
   --couleur-lien: hsl(var(--hu2), 100%, 60%);
   --couleur-lien-hover: hsl(var(--hu2), 100%, 50%);
   --couleur-lien-visited: hsl(var(--hu2), 100%, 70%);
-  --couleur-carte: hsl(var(--hu2), 100%, 80%);
-  --couleur-arriere-carte: hsl(var(--hu2), 100%, 50%);
+  --couleur-menu: hsl(var(--hu4), 100%, 75%);
+  --couleur-arriere-menu: hsl(var(--hu2), 100%, 30%);
+  --couleur-menu-hover: hsl(var(--hu2), 100%, 50%);
+}
+
+.carte {
+  --_couleur: hsl(var(--hu2), 100%, 80%);
+  --_couleur-arriere: hsl(var(--hu2), 100%, 50%);
 }
 
 * {
@@ -80,7 +86,6 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
 }
 
 .global > section {
@@ -97,7 +102,7 @@ body {
   background-color: rgba(255, 255, 255, var(--transparence-section));
 }
 
-.global > header {
+.global > .entete__header {
   flex: 1;
 }
 
@@ -105,6 +110,9 @@ body {
   min-height: 20vh;
 }
 
+/*#menu {
+
+}*/
 #entete {
   background-color: var(--couleur-arriere-entete);
   position: relative;
@@ -187,6 +195,9 @@ button:hover {
     background-position: 50% 40%;
   }
 }
+/* ////////////////////////////// */
+/* Effets */
+/* ////////////////////////////// */
 /*
 .vague {
     position: absolute;
@@ -251,6 +262,9 @@ button:hover {
   transform: skewY(-5deg);
 }
 
+/* ////////////////////////////// */
+/* Base */
+/* ////////////////////////////// */
 /*
 https://chrisburnell.com/clamp-calculator/
 */
@@ -322,21 +336,23 @@ a:hover {
   color: var(--couleur-lien-hover);
 }
 
+/* ////////////////////////////// */
+/* Composants */
+/* ////////////////////////////// */
 .cours {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 1rem;
-  align-content: center;
 }
 
 .carte {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex: 1 1 60%;
-  color: var(--couleur-carte);
-  background-color: var(--couleur-arriere-carte);
+  justify-content: center;
+  flex: 1 0 205px;
+  color: var(--_couleur);
+  background-color: var(--_couleur-arriere);
   border: 1px solid #aaa;
   padding: 1rem;
 }
@@ -351,41 +367,82 @@ a:hover {
   font-weight: 500;
 }
 
+/* //Rédolution tablette
 @media screen and (min-width: 820px) {
-  .cours {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    align-content: center;
-  }
-  .carte {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1 1 20%;
-    color: var(--couleur-carte);
-    background-color: var(--couleur-arriere-carte);
-    border: 1px solid #aaa;
-    padding: 1rem;
-  }
+
+    .cours {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1rem;
+        align-content: center;
+    }
+
+    .carte {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 20%;
+        color: var(--couleur-carte);
+        background-color: var(--couleur-arriere-carte);
+        border: 1px solid #aaa;
+        padding: 1rem;
+    }
+
 }
+
+//Résolution ordinateur
 @media screen and (min-width: 570px) {
-  .cours {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    align-content: center;
-  }
-  .carte {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1 1 20%;
-    color: var(--couleur-carte);
-    background-color: var(--couleur-arriere-carte);
-    border: 1px solid #aaa;
-    padding: 1rem;
-  }
+
+    .cours {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1rem;
+        align-content: center;
+    }
+
+    .carte {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 20%;
+        color: var(--couleur-carte);
+        background-color: var(--couleur-arriere-carte);
+        border: 1px solid #aaa;
+        padding: 1rem;
+    }
+
+} */
+/*
+Feuille de style du menu principal
+*/
+#menu {
+  background-color: var(--couleur-arriere-menu);
+  color: var(--couleur-menu);
+  text-align: center;
+}
+
+.menu-principal-container {
+  background-color: var(--couleur-arriere-menu);
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-item {
+  flex: 1 0 25px;
+  padding: 1rem;
+}
+
+.menu-item a {
+  color: var(--couleur-menu);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu-item:hover {
+  background-color: var(--couleur-menu-hover);
 }/*# sourceMappingURL=style.css.map */

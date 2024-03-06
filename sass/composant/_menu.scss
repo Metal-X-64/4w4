@@ -1,0 +1,34 @@
+/*
+Feuille de style du menu principal
+*/
+
+#menu {
+    background-color: var(--couleur-arriere-menu);
+    color: var(--couleur-menu);
+
+    text-align: center;
+}
+
+.menu-principal-container { //nav
+    background-color: var(--couleur-arriere-menu);
+}
+
+.menu { //ul
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-item { //li
+    flex: 1 0 25px;
+    padding: 1rem;
+}
+
+.menu-item a { // li a
+    color: var(--couleur-menu);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu-item:hover {
+    background-color: var(--couleur-menu-hover);
+}

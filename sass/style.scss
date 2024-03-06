@@ -17,17 +17,28 @@ Text Domain: themesamuelgiroux
 
 @import "entete";
 
-
+/* ////////////////////////////// */
+/* Effets */
+/* ////////////////////////////// */
 
 @import "effet/vague";
 
 @import "effet/diagonal";
 
-@import "base/h";
+/* ////////////////////////////// */
+/* Base */
+/* ////////////////////////////// */
 
+@import "base/h";
 
 @import "base/bouton";
 
 @import "base/liens";
 
+/* ////////////////////////////// */
+/* Composants */
+/* ////////////////////////////// */
+
 @import "composant/cours";
+
+@import "composant/menu";
