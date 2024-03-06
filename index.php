@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +7,8 @@
     <title>Thème du groupe #1</title>
     <!-- link rel="stylesheet" href="<normalize.css" -->
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="normalise.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalise.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -17,12 +16,8 @@
 <body>
     <nav id="menu" class="global">
         <header class="menu__header">
-            <nav class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-30"><a href="http://localhost:8081/4w4/2020/10/07/582-3c1-design-dinteractivite-75h/">Design d’interactivité</a></li>
-<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-31"><a href="http://localhost:8081/4w4/2020/10/07/582-3m5imagerie-3d-75h/" aria-current="page">Imagerie 3D</a></li>
-<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost:8081/4w4/2020/10/07/582-2j2creation-de-jeu-2d-60h/">Création de jeu 2D</a></li>
-<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="#accueil">Accueil</a></li>
-<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a href="#footer">Pied de page</a></li>
-</ul></nav>        </header>
+            <?php wp_nav_menu(array("container" => "nav")); ?>
+        </header>
     </nav>
     <div id="entete" class="global">
         <section class="entete__header">
@@ -43,16 +38,41 @@
         <section>
             <h2>Accueil (h2)</h2>
             <div class="cours">
-                                <div class="carte">
-                        <h4>582-3M5</h4>
-                        <!-- <h3><br />
-<b>Warning</b>:  Undefined variable $titrecours in <b>D:\xampp\htdocs\4w4\wp-content\themes\theme_samuelgiroux\index.php</b> on line <b>68</b><br />
-</h3> -->
-                        <h3>	Imagerie 3D </h3>
-                        <p>Dans ce cours, l’étudiant est initié au monde de l’imagerie de synthèse. Il est amené à maîtriser les outils et…</p>
-                        <h4>Durée: 75h</h4>
+            <?php
+                /*if (have_posts()) {
+                    while(have_posts()) {
+                        the_post();
+                        the_title('<h2>','</h3>');
+                        echo wp_trim_words(get_the_content(),30);
+
+                    }
+                }*/
+                if (have_posts()):
+                    while(have_posts()): the_post();
+                    $titre = get_the_title();
+                    $sigle = substr($titre,0,7);
+
+                    $pos_parenthese = strpos($titre, '(');
+                    $duree = substr($titre, $pos_parenthese+1,-1);
+                    $titre = substr($titre,7, $pos_parenthese-7);
+
+                    // $titrecours = substr($titre,7,-6);
+                    // $duree = substr($titre,-6,6);
+
+                    //$titre = 
+                    //strpos()
+                    
+                    ?>
+                    <div class="carte">
+                        <h4><?php echo $sigle; ?></h4>
+                        <!-- <h3><?php echo $titrecours;?></h3> -->
+                        <h3><?php echo $titre; ?></h3>
+                        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
+                        <h4>Durée: <?php echo $duree; ?></h4>
                     </div>
-                                                </div>
+                <?php endwhile ?>
+                <?php endif; ?>
+                </div>
             
             <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit, optio exercitationem quos unde excepturi. Alias, aspernatur. Culpa expedita modi, rem, distinctio enim placeat tempora officia mollitia, odit vitae soluta."</blockquote>
                 
