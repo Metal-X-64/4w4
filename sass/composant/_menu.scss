@@ -18,8 +18,8 @@ Feuille de style du menu principal
     display: flex;
     list-style-type: none; 
     flex-direction: column;
-    transform: translateX(300%);
-
+    transform: translateX(500%);
+    z-index: 10;
     @media (min-width: 700px) {
         position: static;
         flex-direction: row;
@@ -56,6 +56,23 @@ Feuille de style du menu principal
     }
 }
 
-#chk_burger:checked ~ .menu{
-    transform: translateX(0);
+#burger:hover {
+    cursor: pointer;
 }
+
+#chk_burger {
+    display: none;
+}
+
+#chk_burger:checked ~ .menu__header {
+    height: 300px;
+
+    @media (min-width: 700px) {
+        height: 10vh;
+    }
+}
+
+#chk_burger:checked ~ .menu__header .menu {
+    transform: translateX(0%);
+}
+

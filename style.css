@@ -73,6 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Prompt", sans-serif;
+  overflow-x: hidden;
 }
 
 .global {
@@ -168,7 +169,6 @@ button:hover {
 @media screen and (max-width: 820px) {
   .global > header {
     text-align: center;
-    min-height: 5vh;
   }
   .global > footer {
     text-align: center;
@@ -426,7 +426,8 @@ Feuille de style du menu principal
   display: flex;
   list-style-type: none;
   flex-direction: column;
-  transform: translateX(300%);
+  transform: translateX(500%);
+  z-index: 10;
 }
 @media (min-width: 700px) {
   .menu {
@@ -465,6 +466,23 @@ Feuille de style du menu principal
   }
 }
 
-#chk_burger:checked ~ .menu {
-  transform: translateX(0);
+#burger:hover {
+  cursor: pointer;
+}
+
+#chk_burger {
+  display: none;
+}
+
+#chk_burger:checked ~ .menu__header {
+  height: 300px;
+}
+@media (min-width: 700px) {
+  #chk_burger:checked ~ .menu__header {
+    height: 10vh;
+  }
+}
+
+#chk_burger:checked ~ .menu__header .menu {
+  transform: translateX(0%);
 }/*# sourceMappingURL=style.css.map */
