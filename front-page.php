@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-<h1>INDEX.PHP</h1>
+
+<h1>FRONT-PAGE.PHP</h1>
     <div id="entete" class="global">
         <section class="entete__header">
             <h1>Thème du groupe #1 (h1)</h1>
@@ -28,11 +29,10 @@
                 if (have_posts()):
                     while(have_posts()): the_post();
                     $titre = get_the_title();
-                    
                     ?>
                     <div class="carte">
                         <h3><?php echo $titre; ?></h3>
-                        <p><?php the_content(); ?></p>
+                        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
                     </div>
                 <?php endwhile ?>
                 <?php endif; ?>
