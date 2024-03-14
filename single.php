@@ -1,34 +1,18 @@
 <?php get_header(); ?>
 
-    <div id="entete" class="global">
-        <section class="entete__header">
-            <h1><?php echo get_bloginfo("name"); ?></h1>
-            <h2><?php echo get_bloginfo("description"); ?></h2>
-            <h3>TIM-Collège de Maisoneuve</h3>
-            <div class="espace">
-                <button>Événements</button>
-            </div>
-        </section>
-        <!-- vague -->
-        <?php get_template_part("gabarits/vague"); ?>
-    </div>
     <div id="accueil" class="global">
         <section>
-            <h2>Accueil (h2)</h2>
             <div class="cours">
             <?php
-                if (have_posts()):
-                    while(have_posts()): the_post(); ?>
+                if (have_posts()): the_post();
+                    $titre = get_the_title();
+                    ?>
                     <div class="carte">
-                        <h3><?php the_title(); ?></h3>
-                        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
-                        <!-- ajoute un lien vers l'article -->
-                        <a href="<?php the_permalink(); ?>">Suite</a>
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php the_content(); ?></p>
                     </div>
-                <?php endwhile ?>
                 <?php endif; ?>
                 </div>
-            
             <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit, optio exercitationem quos unde excepturi. Alias, aspernatur. Culpa expedita modi, rem, distinctio enim placeat tempora officia mollitia, odit vitae soluta."</blockquote>
                 
         </section>
@@ -47,7 +31,7 @@
             <h4>Photos (h4)</h4>
             <a href="#">Voir plus</a>
         </section>
-        <?php get_template_part("gabarits/vague"); ?>
+    <?php get_template_part("gabarits/vague"); ?>
     </div>
     <?php get_footer(); ?>
-    
+        
