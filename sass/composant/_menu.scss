@@ -65,7 +65,7 @@ Feuille de style du menu principal
 }
 
 #chk_burger:checked ~ .menu__header {
-    height: 300px;
+    height: 430px;
 
     @media (min-width: 700px) {
         height: 10vh;

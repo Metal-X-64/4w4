@@ -9,3 +9,7 @@ a:visited {
 a:hover {
     color: var(--couleur-lien-hover);
 }
+
+.carte > a {
+    color: var(--couleur-lien-single);
+}
