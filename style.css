@@ -320,7 +320,7 @@ a:hover {
 /* ////////////////////////////// */
 /* Composants */
 /* ////////////////////////////// */
-.cours {
+.destinations {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -346,6 +346,12 @@ a:hover {
 .carte > h4 {
   font-size: 19px;
   font-weight: 500;
+}
+
+.post-categories {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
 }
 
 /* //Rédolution tablette

@@ -1,20 +1,8 @@
 <?php get_header(); ?>
 
-    <div id="entete" class="global">
-        <section class="entete__header">
-            <h1><?php echo get_bloginfo("name"); ?></h1>
-            <h2><?php echo get_bloginfo("description"); ?></h2>
-            <h3>TIM-Collège de Maisoneuve</h3>
-            <div class="espace">
-                <button>Événements</button>
-            </div>
-        </section>
-        <!-- vague -->
-        <?php get_template_part("gabarits/vague"); ?>
-    </div>
     <div id="accueil" class="global">
         <section>
-            <h2>Accueil (h2)</h2>
+            <h2>Destination par catégorie</h2>
             <div class="destinations">
             <?php
                 if (have_posts()):

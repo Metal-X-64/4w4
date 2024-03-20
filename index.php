@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<h1>INDEX.PHP</h1>
     <div id="entete" class="global">
         <section class="entete__header">
             <h1>Thème du groupe #1 (h1)</h1>
