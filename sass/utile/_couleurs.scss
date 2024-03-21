@@ -1,3 +1,68 @@
+/* Variable Sass */
+
+/* palette de couleurs */
+$--clr-bleu-pale    : hsl(220, 100%, 85%);
+$--clr-bleu-leger  : hsl(220, 100%, 60%);
+$--clr-bleu-moyen  : hsl(220, 100%, 30%);    
+$--clr-bleu-fonce  : hsl(220, 100%, 15%);
+
+
+$--clr-orange-pale: hsl(40, 100%, 85%);
+$--clr-orange-leger  : hsl(40, 100%, 50%);
+$--clr-orange-moyen  : hsl(40, 100%, 30%);
+$--clr-orange-fonce  : hsl(40, 100%, 15%);
+
+$--clr-rouge-pale: hsl(10, 100%, 85%);
+$--clr-rouge-leger  : hsl(10, 100%, 50%);
+$--clr-rouge-moyen  : hsl(10, 100%, 30%);
+$--clr-rouge-fonce  : hsl(10, 100%, 15%);
+
+$--clr-vert-pale: hsl(70, 100%, 85%);
+$--clr-vert-leger  : hsl(70, 100%, 50%);
+$--clr-vert-moyen  : hsl(70, 100%, 30%);
+$--clr-vert-fonce  : hsl(70, 100%, 15%);
+
+/* À partir des variables de couleurs de la palette choisie
+on crée un mapping en catégorisant les différentes couleurs,
+Ce map contient un map principal et plusieur sous-map */
+
+$defaut: (
+    primaire : (
+        100: $--clr-bleu-pale,
+        200: $--clr-bleu-leger,
+        300: $--clr-bleu-moyen,
+        400: $--clr-bleu-fonce
+    ),
+    secondaire : (
+        100: $--clr-orange-pale,
+        200: $--clr-orange-leger,
+        300: $--clr-orange-moyen,
+        400: $--clr-orange-fonce
+    ),
+    ternaire : (
+        100: $--clr-rouge-pale,
+        200: $--clr-rouge-leger,
+        300: $--clr-rouge-moyen,
+        400: $--clr-rouge-fonce
+    ),
+    vert : (
+        100: $--clr-vert-pale,
+        200: $--clr-vert-leger,
+        300: $--clr-vert-moyen,
+        400: $--clr-vert-fonce
+    )
+);
+
+
+/* Agencement de couleurs */
+
+$agencement-couleur :(
+    primaire: ($--clr-bleu-pale, ($--clr-bleu-fonce, $--clr-bleu-moyen)),
+    secondaire: ($--clr-orange-fonce, $--clr-orange-pale),
+    ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
+    vert: ($--clr-vert-fonce, $--clr-vert-pale)
+);
+
 :root {
     // Calcul des teintes
     --hu1 : 180; // couleur initiale
@@ -10,25 +75,6 @@
     // La luminosité
     --l-arriere : 30%;
     --l-avant : 20%;
-
-    
-    /*// couleur arrière plan - background-color
-    --couleur-arriere-entete : hsl(var(--hu1),var(--s-arriere), var(--l-arriere));
-    // --couleur-arriere-accueil : hsl(var(--u2),var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-accueil: hsl(var(--hu2),var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-evenement : hsl(var(--hu3),var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-galerie : hsl(var(--hu4),var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-footer : hsl(var(--hu1),var(--s-arriere), var(--l-arriere));*/
-    
-
-    
-    // couleur avant plan - color
-    /*--couleur-entete : hsl(var(--hu1),var(--s-avant), var(--l-avant));
-    --couleur-accueil : hsl(var(--hu2),var(--s-avant), var(--l-avant));
-    --couleur-evenement : hsl(var(--hu3),var(--s-avant), var(--l-avant));
-    --couleur-galerie : hsl(var(--hu4),var(--s-avant), var(--l-avant));
-    --couleur-footer : hsl(var(--hu1),var(--s-avant), var(--l-avant));*/
-    
 
     // Couleurs monochrome
     
@@ -73,6 +119,8 @@
     --couleur-lien-single: hsl(var(--hu2), 100%, 90%);
     
 }
+
+/* Variable local */
 
 .carte {
     --_couleur: hsl(var(--hu2), 100%, 80%);

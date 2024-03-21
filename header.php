@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="menu__entete" class="global">
+    <div id="menu__entete" class="global clr-agencement-primaire">
         <?php echo get_custom_logo(); ?>
         <input type="checkbox" name="" id="chk_burger">
         <label id="burger" for="chk_burger">
