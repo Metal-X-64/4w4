@@ -29,14 +29,14 @@ Ce map contient un map principal et plusieur sous-map */
   --couleur-arriere-menu: hsl(var(--hu2), 100%, 30%);
   --couleur-arriere-entete: hsl(var(--hu1), 100%, 70%);
   --couleur-arriere-accueil: hsl(var(--hu2), 100%, 40%);
-  --couleur-arriere-footer: hsl(var(--hu1), 100%, 70%);
+  --couleur-arriere-footer: hsl(var(--hu2), 100%, 20%);
   --couleur-arriere-evenement: var(--couleur-arriere-accueil);
   --couleur-arriere-galerie: var(--couleur-arriere-accueil);
-  --couleur-entete: hsl(var(--hu1), 100%, 20%);
+  --couleur-entete: hsl(var(--hu2), 100%, 20%);
   --couleur-accueil: hsl(var(--hu2), 100%, 85%);
-  --couleur-evenement: hsl(var(--hu3), 100%, 30%);
-  --couleur-galerie: hsl(var(--hu4), 100%, 75%);
-  --couleur-footer: hsl(var(--hu1), 100%, 10%);
+  --couleur-evenement: hsl(var(--hu4), 100%, 30%);
+  --couleur-galerie: hsl(var(--hu2), 100%, 20%);
+  --couleur-footer: hsl(var(--hu1), 100%, 50%);
   --couleur-blockquote: hsl(var(--hu2), 100%, 60%);
   --couleur-arriere-diagonal: hsl(var(--hu2), 100%, 80%);
   --couleur-lien: hsl(var(--hu2), 100%, 60%);
@@ -96,35 +96,35 @@ Ce map contient un map principal et plusieur sous-map */
 }
 
 .clr-secondaire-100 {
-  color: hsl(40, 100%, 85%);
+  color: hsl(179, 100%, 65%);
 }
 
 .bck-secondaire-100 {
-  background-color: hsl(40, 100%, 85%);
+  background-color: hsl(179, 100%, 65%);
 }
 
 .clr-secondaire-200 {
-  color: hsl(40, 100%, 50%);
+  color: hsl(188, 100%, 50%);
 }
 
 .bck-secondaire-200 {
-  background-color: hsl(40, 100%, 50%);
+  background-color: hsl(188, 100%, 50%);
 }
 
 .clr-secondaire-300 {
-  color: hsl(40, 100%, 30%);
+  color: hsl(195, 100%, 35%);
 }
 
 .bck-secondaire-300 {
-  background-color: hsl(40, 100%, 30%);
+  background-color: hsl(195, 100%, 35%);
 }
 
 .clr-secondaire-400 {
-  color: hsl(40, 100%, 15%);
+  color: hsl(191, 100%, 19%);
 }
 
 .bck-secondaire-400 {
-  background-color: hsl(40, 100%, 15%);
+  background-color: hsl(191, 100%, 19%);
 }
 
 .clr-ternaire-100 {
@@ -159,36 +159,36 @@ Ce map contient un map principal et plusieur sous-map */
   background-color: hsl(10, 100%, 15%);
 }
 
-.clr-vert-100 {
-  color: hsl(70, 100%, 85%);
+.clr-mauve-bleu-100 {
+  color: hsl(244, 100%, 72%);
 }
 
-.bck-vert-100 {
-  background-color: hsl(70, 100%, 85%);
+.bck-mauve-bleu-100 {
+  background-color: hsl(244, 100%, 72%);
 }
 
-.clr-vert-200 {
-  color: hsl(70, 100%, 50%);
+.clr-mauve-bleu-200 {
+  color: hsl(262, 100%, 59%);
 }
 
-.bck-vert-200 {
-  background-color: hsl(70, 100%, 50%);
+.bck-mauve-bleu-200 {
+  background-color: hsl(262, 100%, 59%);
 }
 
-.clr-vert-300 {
-  color: hsl(70, 100%, 30%);
+.clr-mauve-bleu-300 {
+  color: hsl(259, 100%, 42%);
 }
 
-.bck-vert-300 {
-  background-color: hsl(70, 100%, 30%);
+.bck-mauve-bleu-300 {
+  background-color: hsl(259, 100%, 42%);
 }
 
-.clr-vert-400 {
-  color: hsl(70, 100%, 15%);
+.clr-mauve-bleu-400 {
+  color: hsl(250, 100%, 19%);
 }
 
-.bck-vert-400 {
-  background-color: hsl(70, 100%, 15%);
+.bck-mauve-bleu-400 {
+  background-color: hsl(250, 100%, 19%);
 }
 
 /* Mixin pour agencer des couleurs */
@@ -198,8 +198,8 @@ Ce map contient un map principal et plusieur sous-map */
 }
 
 .clr-agencement-secondaire {
-  color: hsl(40, 100%, 15%);
-  background-color: hsl(40, 100%, 85%);
+  color: hsl(179, 100%, 65%);
+  background-image: linear-gradient(90deg, hsl(195, 100%, 35%), hsl(179, 100%, 65%));
 }
 
 .clr-agencement-ternaire {
@@ -207,9 +207,9 @@ Ce map contient un map principal et plusieur sous-map */
   background-color: hsl(10, 100%, 85%);
 }
 
-.clr-agencement-vert {
-  color: hsl(70, 100%, 15%);
-  background-color: hsl(70, 100%, 85%);
+.clr-agencement-mauve-bleu {
+  color: hsl(250, 100%, 19%);
+  background-image: linear-gradient(90deg, hsl(259, 100%, 42%), hsl(250, 100%, 19%));
 }
 
 * {
@@ -256,24 +256,21 @@ body {
 }
 
 #entete {
-  background-color: var(--couleur-arriere-entete);
   position: relative;
   color: var(--couleur-entete);
   min-height: 60vh;
 }
 
-header > h1 {
-  box-shadow: 1rem;
-  text-shadow: 5px 4px 2px black;
-}
-
+/* header > h1 {
+    box-shadow: 1rem;
+    text-shadow: 5px 4px 2px black;
+}*/
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-accueil);
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
 }
 
@@ -281,6 +278,10 @@ header > h1 {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
   position: relative;
+}
+
+#galerie > h4 {
+  font-size: 30px;
 }
 
 #footer {
@@ -412,8 +413,8 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(0.625rem, 0.538rem + 0.4348vi, 0.875rem);
-  font-weight: 250;
+  font-size: 20px;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -500,7 +501,7 @@ a:hover {
   gap: 1rem;
 }
 
-/* //Rédolution tablette
+/* //Résolution tablette
 @media screen and (min-width: 820px) {
 
     .cours {

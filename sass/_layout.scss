@@ -45,16 +45,16 @@ body {
 }
 
 #entete {
-    background-color: var(--couleur-arriere-entete);
+    //background-color: var(--couleur-arriere-entete);
     position: relative;
     color: var(--couleur-entete);
     min-height: 60vh;
 }
 
-header > h1 {
+/* header > h1 {
     box-shadow: 1rem;
     text-shadow: 5px 4px 2px black;
-}
+}*/
 
 #accueil{
     background-color: var(--couleur-arriere-accueil);
@@ -62,7 +62,7 @@ header > h1 {
 }
 
 #evenement{
-    background-color: var(--couleur-arriere-evenement);
+    //background-color: var(--couleur-arriere-evenement);
     color :var(--couleur-evenement);
 }
 
@@ -70,6 +70,10 @@ header > h1 {
     background-color: var(--couleur-arriere-galerie);
     color :var(--couleur-galerie);
     position: relative;
+}
+
+#galerie > h4 {
+    font-size: 30px;
 }
 
 #footer{

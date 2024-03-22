@@ -7,20 +7,20 @@ $--clr-bleu-moyen  : hsl(220, 100%, 30%);
 $--clr-bleu-fonce  : hsl(220, 100%, 15%);
 
 
-$--clr-orange-pale: hsl(40, 100%, 85%);
-$--clr-orange-leger  : hsl(40, 100%, 50%);
-$--clr-orange-moyen  : hsl(40, 100%, 30%);
-$--clr-orange-fonce  : hsl(40, 100%, 15%);
+$--clr-turquoise-pale: hsl(179, 100%, 65%);
+$--clr-turquoise-leger  : hsl(188, 100%, 50%);
+$--clr-turquoise-moyen  : hsl(195, 100%, 35%);
+$--clr-turquoise-fonce  : hsl(191, 100%, 19%);
 
 $--clr-rouge-pale: hsl(10, 100%, 85%);
 $--clr-rouge-leger  : hsl(10, 100%, 50%);
 $--clr-rouge-moyen  : hsl(10, 100%, 30%);
 $--clr-rouge-fonce  : hsl(10, 100%, 15%);
 
-$--clr-vert-pale: hsl(70, 100%, 85%);
-$--clr-vert-leger  : hsl(70, 100%, 50%);
-$--clr-vert-moyen  : hsl(70, 100%, 30%);
-$--clr-vert-fonce  : hsl(70, 100%, 15%);
+$--clr-mauve-bleu-pale: hsl(244, 100%, 72%);
+$--clr-mauve-bleu-leger  : hsl(262, 100%, 59%);
+$--clr-mauve-bleu-moyen  : hsl(259, 100%, 42%);
+$--clr-mauve-bleu-fonce  : hsl(250, 100%, 19%);
 
 /* À partir des variables de couleurs de la palette choisie
 on crée un mapping en catégorisant les différentes couleurs,
@@ -34,10 +34,10 @@ $defaut: (
         400: $--clr-bleu-fonce
     ),
     secondaire : (
-        100: $--clr-orange-pale,
-        200: $--clr-orange-leger,
-        300: $--clr-orange-moyen,
-        400: $--clr-orange-fonce
+        100: $--clr-turquoise-pale,
+        200: $--clr-turquoise-leger,
+        300: $--clr-turquoise-moyen,
+        400: $--clr-turquoise-fonce
     ),
     ternaire : (
         100: $--clr-rouge-pale,
@@ -45,11 +45,11 @@ $defaut: (
         300: $--clr-rouge-moyen,
         400: $--clr-rouge-fonce
     ),
-    vert : (
-        100: $--clr-vert-pale,
-        200: $--clr-vert-leger,
-        300: $--clr-vert-moyen,
-        400: $--clr-vert-fonce
+    mauve-bleu : (
+        100: $--clr-mauve-bleu-pale,
+        200: $--clr-mauve-bleu-leger,
+        300: $--clr-mauve-bleu-moyen,
+        400: $--clr-mauve-bleu-fonce
     )
 );
 
@@ -58,9 +58,9 @@ $defaut: (
 
 $agencement-couleur :(
     primaire: ($--clr-bleu-pale, ($--clr-bleu-fonce, $--clr-bleu-moyen)),
-    secondaire: ($--clr-orange-fonce, $--clr-orange-pale),
+    secondaire: ($--clr-turquoise-pale, ($--clr-turquoise-moyen, $--clr-turquoise-pale)),
     ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
-    vert: ($--clr-vert-fonce, $--clr-vert-pale)
+    mauve-bleu: ($--clr-mauve-bleu-fonce, ($--clr-mauve-bleu-moyen, $--clr-mauve-bleu-fonce))
 );
 
 :root {
@@ -84,16 +84,16 @@ $agencement-couleur :(
     --couleur-arriere-accueil: hsl(var(--hu2), 100%, 40%); //Couleur de l'arrière plan de l'accueil
     //--couleur-arriere-evenement : hsl(var(--hu3), 100%, 80%);
     //--couleur-arriere-galerie : hsl(var(--hu4), 100%, 85%);
-    --couleur-arriere-footer : hsl(var(--hu1), 100%, 70%); //Couleur de l'arrière plan du footer
+    --couleur-arriere-footer : hsl(var(--hu2), 100%, 20%); //Couleur de l'arrière plan du footer
 
     --couleur-arriere-evenement : var(--couleur-arriere-accueil); //Couleur de l'arrière plan de l'évenement
     --couleur-arriere-galerie : var(--couleur-arriere-accueil); //Couleur de l'arrière plan de la galerie
 
-    --couleur-entete : hsl(var(--hu1), 100%, 20%); //Couleur des polices de l'entete
+    --couleur-entete : hsl(var(--hu2), 100%, 20%); //Couleur des polices de l'entete
     --couleur-accueil: hsl(var(--hu2), 100%, 85%); //Couleur des polices de l'accueil
-    --couleur-evenement : hsl(var(--hu3), 100%, 30%);//Couleur des polices de l'évenement
-    --couleur-galerie : hsl(var(--hu4), 100%, 75%); //Couleur des polices de la galerie
-    --couleur-footer : hsl(var(--hu1), 100%, 10%); //Couleur des polices du footer
+    --couleur-evenement : hsl(var(--hu4), 100%, 30%);//Couleur des polices de l'évenement
+    --couleur-galerie : hsl(var(--hu2), 100%, 20%); //Couleur des polices de la galerie
+    --couleur-footer : hsl(var(--hu1), 100%, 50%); //Couleur des polices du footer
 
     //--couleur-bouton : hsl(var(--hu2), 100%, 40%);
     //--couleur-bouton-hover : hsl(var(--hu2), 100%, 20%);

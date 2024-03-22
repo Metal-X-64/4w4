@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div id="entete" class="global">
+    <div id="entete" class="global clr-agencement-secondaire">
         <section class="entete__header">
             <h1><?php echo get_bloginfo("name"); ?></h1>
             <h2><?php echo get_bloginfo("description"); ?></h2>
@@ -34,7 +34,7 @@
                 
         </section>
     </div>
-    <div id="evenement" class="global diagonal">
+    <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
         <section>
             <h2>Événement (h2)</h2>
             <button>
@@ -42,7 +42,7 @@
             </button>
         </section>
     </div>
-    <div id="galerie" class="global">
+    <div id="galerie" class="global clr-agencement-secondaire">
         <section>
             <h2>Galerie (h2)</h2>
             <h4>Photos (h4)</h4>
