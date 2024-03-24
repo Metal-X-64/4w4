@@ -8,6 +8,8 @@
             <div class="espace">
                 <button>Événements</button>
             </div>
+
+            
         </section>
         <!-- vague -->
         <?php get_template_part("gabarits/vague"); ?>
@@ -15,6 +17,23 @@
     <div id="accueil" class="global">
         <section>
             <h2>Accueil (h2)</h2>
+            <div class="categories">
+                <?php 
+                    foreach((get_categories()) as $category) :
+                        $slug = $category->slug;
+                        $nomCat = $category->name;
+                        $description = $category->description;
+                        $nbArticles = $category->count;
+                ?>
+                <div class="carte">
+                    <h3><?php $nomCat; ?></h3>
+                    <p><?php wp_trim_words($description, 10); ?></p>
+                    <a href="/4w4/category/<?php $slug; ?>/">Suite</a>
+                    <p><?php $nbArticles; ?></p>
+                </div>
+                <?php endforeach ?>
+            </div>
+            <br>
             <div class="destinations">
             <?php
                 if (have_posts()):
@@ -50,4 +69,3 @@
         <?php get_template_part("gabarits/vague"); ?>
     </div>
     <?php get_footer(); ?>
-    
