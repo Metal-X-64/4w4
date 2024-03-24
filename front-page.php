@@ -17,23 +17,26 @@
     <div id="accueil" class="global">
         <section>
             <h2>Accueil (h2)</h2>
+            <br>
+            <h3>Catégories de voyages</h3>
             <div class="categories">
                 <?php 
                     foreach((get_categories()) as $category) :
-                        $slug = $category->slug;
-                        $nomCat = $category->name;
-                        $description = $category->description;
-                        $nbArticles = $category->count;
+                        $slug = $category -> slug;
+                        $nomCat = $category -> name;
+                        $description = $category -> description;
+                        $nbArticles = $category -> count;
                 ?>
                 <div class="carte">
-                    <h3><?php $nomCat; ?></h3>
-                    <p><?php wp_trim_words($description, 10); ?></p>
-                    <a href="/4w4/category/<?php $slug; ?>/">Suite</a>
-                    <p><?php $nbArticles; ?></p>
+                    <h3><?php echo $nomCat; ?></h3>
+                    <p><?php echo wp_trim_words($description, 10); ?></p>
+                    <a href="/4w4/category/<?php echo $slug; ?>/">Suite</a>
+                    <p><?php echo $nbArticles; ?> articles</p>
                 </div>
                 <?php endforeach ?>
             </div>
             <br>
+            <h3>Destinations populaires</h3>
             <div class="destinations">
             <?php
                 if (have_posts()):
