@@ -3,7 +3,7 @@
 
 # TP1 - Club de voyage
 
-Site web de voyages.
+Un site web montrant des variétés de catégories de voyages.
 
 # Exercice 2 (5 points)
 

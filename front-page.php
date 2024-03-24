@@ -31,7 +31,6 @@
                 </div>
             
             <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit, optio exercitationem quos unde excepturi. Alias, aspernatur. Culpa expedita modi, rem, distinctio enim placeat tempora officia mollitia, odit vitae soluta."</blockquote>
-                
         </section>
     </div>
     <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
