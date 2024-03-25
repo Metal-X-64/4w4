@@ -40,17 +40,18 @@ Ce map contient un map principal et plusieur sous-map */
   --couleur-blockquote: hsl(var(--hu2), 100%, 60%);
   --couleur-arriere-diagonal: hsl(var(--hu2), 100%, 80%);
   --couleur-lien: hsl(var(--hu2), 100%, 60%);
-  --couleur-lien-hover: hsl(var(--hu2), 100%, 50%);
+  --couleur-lien-hover: hsl(var(--hu3), 100%, 50%);
   --couleur-lien-visited: hsl(var(--hu2), 100%, 70%);
   --couleur-menu: hsl(var(--hu4), 100%, 75%);
   --couleur-menu-hover: hsl(var(--hu2), 100%, 50%);
-  --couleur-lien-single: hsl(var(--hu2), 100%, 90%);
+  --couleur-lien-single: hsl(var(--hu1), 100%, 50%);
 }
 
 /* Variable local */
 .carte {
   --_couleur: hsl(var(--hu2), 100%, 80%);
   --_couleur-arriere: hsl(var(--hu2), 100%, 50%);
+  --_couleur-nb-articles: hsl(var(--hu4), 100%, 80%);
 }
 
 #entete {
@@ -128,35 +129,35 @@ Ce map contient un map principal et plusieur sous-map */
 }
 
 .clr-ternaire-100 {
-  color: hsl(10, 100%, 85%);
+  color: hsl(172, 100%, 76%);
 }
 
 .bck-ternaire-100 {
-  background-color: hsl(10, 100%, 85%);
+  background-color: hsl(172, 100%, 76%);
 }
 
 .clr-ternaire-200 {
-  color: hsl(10, 100%, 50%);
+  color: hsl(174, 100%, 46%);
 }
 
 .bck-ternaire-200 {
-  background-color: hsl(10, 100%, 50%);
+  background-color: hsl(174, 100%, 46%);
 }
 
 .clr-ternaire-300 {
-  color: hsl(10, 100%, 30%);
+  color: hsl(177, 100%, 31%);
 }
 
 .bck-ternaire-300 {
-  background-color: hsl(10, 100%, 30%);
+  background-color: hsl(177, 100%, 31%);
 }
 
 .clr-ternaire-400 {
-  color: hsl(10, 100%, 15%);
+  color: hsl(175, 100%, 15%);
 }
 
 .bck-ternaire-400 {
-  background-color: hsl(10, 100%, 15%);
+  background-color: hsl(175, 100%, 15%);
 }
 
 .clr-mauve-bleu-100 {
@@ -203,12 +204,12 @@ Ce map contient un map principal et plusieur sous-map */
 }
 
 .clr-agencement-ternaire {
-  color: hsl(10, 100%, 15%);
-  background-color: hsl(10, 100%, 85%);
+  color: hsl(172, 100%, 76%);
+  background-image: linear-gradient(90deg, hsl(175, 100%, 15%), hsl(177, 100%, 31%));
 }
 
 .clr-agencement-mauve-bleu {
-  color: hsl(250, 100%, 19%);
+  color: hsl(244, 100%, 72%);
   background-image: linear-gradient(90deg, hsl(259, 100%, 42%), hsl(250, 100%, 19%));
 }
 
@@ -449,6 +450,8 @@ button:hover {
 
 a {
   color: var(--couleur-lien);
+  text-decoration: none;
+  font-size: small;
 }
 
 a:visited {
@@ -466,7 +469,7 @@ a:hover {
 /* ////////////////////////////// */
 /* Composants */
 /* ////////////////////////////// */
-.destinations {
+.destinations, .categories {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -482,11 +485,24 @@ a:hover {
   background-color: var(--_couleur-arriere);
   border: 1px solid #aaa;
   padding: 1rem;
+  border-radius: 10px;
+}
+
+.carte > p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.carte > h2 {
+  font-size: 45px;
+  font-weight: 500;
+  border-style: double;
 }
 
 .carte > h3 {
   font-size: 35px;
   font-weight: 500;
+  border-style: double;
 }
 
 .carte > h4 {
@@ -498,6 +514,11 @@ a:hover {
   display: flex;
   list-style-type: none;
   gap: 1rem;
+  justify-content: center;
+}
+
+.carte > .nb-articles {
+  color: var(--_couleur-nb-articles);
 }
 
 /* //Résolution tablette

@@ -12,10 +12,10 @@ $--clr-turquoise-leger  : hsl(188, 100%, 50%);
 $--clr-turquoise-moyen  : hsl(195, 100%, 35%);
 $--clr-turquoise-fonce  : hsl(191, 100%, 19%);
 
-$--clr-rouge-pale: hsl(10, 100%, 85%);
-$--clr-rouge-leger  : hsl(10, 100%, 50%);
-$--clr-rouge-moyen  : hsl(10, 100%, 30%);
-$--clr-rouge-fonce  : hsl(10, 100%, 15%);
+$--clr-vert-pale: hsl(172, 100%, 76%);
+$--clr-vert-leger  : hsl(174, 100%, 46%);
+$--clr-vert-moyen  : hsl(177, 100%, 31%);
+$--clr-vert-fonce  : hsl(175, 100%, 15%);
 
 $--clr-mauve-bleu-pale: hsl(244, 100%, 72%);
 $--clr-mauve-bleu-leger  : hsl(262, 100%, 59%);
@@ -40,10 +40,10 @@ $defaut: (
         400: $--clr-turquoise-fonce
     ),
     ternaire : (
-        100: $--clr-rouge-pale,
-        200: $--clr-rouge-leger,
-        300: $--clr-rouge-moyen,
-        400: $--clr-rouge-fonce
+        100: $--clr-vert-pale,
+        200: $--clr-vert-leger,
+        300: $--clr-vert-moyen,
+        400: $--clr-vert-fonce
     ),
     mauve-bleu : (
         100: $--clr-mauve-bleu-pale,
@@ -59,8 +59,8 @@ $defaut: (
 $agencement-couleur :(
     primaire: ($--clr-bleu-pale, ($--clr-bleu-fonce, $--clr-bleu-moyen)),
     secondaire: ($--clr-turquoise-pale, ($--clr-turquoise-moyen, $--clr-turquoise-pale)),
-    ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
-    mauve-bleu: ($--clr-mauve-bleu-fonce, ($--clr-mauve-bleu-moyen, $--clr-mauve-bleu-fonce))
+    ternaire: ($--clr-vert-pale, ($--clr-vert-fonce, $--clr-vert-moyen)),
+    mauve-bleu: ($--clr-mauve-bleu-pale, ($--clr-mauve-bleu-moyen, $--clr-mauve-bleu-fonce))
 );
 
 :root {
@@ -105,7 +105,7 @@ $agencement-couleur :(
     --couleur-arriere-diagonal: hsl(var(--hu2), 100%, 80%);
 
     --couleur-lien: hsl(var(--hu2), 100%, 60%);
-    --couleur-lien-hover: hsl(var(--hu2), 100%, 50%);
+    --couleur-lien-hover: hsl(var(--hu3), 100%, 50%);
     --couleur-lien-visited: hsl(var(--hu2), 100%, 70%);
 
     //--couleur-carte: hsl(var(--hu2), 100%, 80%);
@@ -116,7 +116,7 @@ $agencement-couleur :(
 
     --couleur-menu-hover: hsl(var(--hu2), 100%, 50%);
     
-    --couleur-lien-single: hsl(var(--hu2), 100%, 90%);
+    --couleur-lien-single: hsl(var(--hu1), 100%, 50%);
     
 }
 
@@ -125,6 +125,7 @@ $agencement-couleur :(
 .carte {
     --_couleur: hsl(var(--hu2), 100%, 80%);
     --_couleur-arriere: hsl(var(--hu2), 100%, 50%);
+    --_couleur-nb-articles: hsl(var(--hu4), 100%, 80%);
 }
 
 #entete {

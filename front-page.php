@@ -28,10 +28,11 @@
                         $nbArticles = $category -> count;
                 ?>
                 <div class="carte">
-                    <h3><?php echo $nomCat; ?></h3>
+                    <h3 class="global clr-agencement-ternaire"><?php echo $nomCat; ?></h3> 
                     <p><?php echo wp_trim_words($description, 10); ?></p>
                     <a href="/4w4/category/<?php echo $slug; ?>/">Suite</a>
-                    <p><?php echo $nbArticles; ?> articles</p>
+                    <p class="nb-articles"><?php echo $nbArticles; ?> articles</p>
+                    
                 </div>
                 <?php endforeach ?>
             </div>
@@ -42,16 +43,17 @@
                 if (have_posts()):
                     while(have_posts()): the_post(); ?>
                     <div class="carte">
-                        <h3><?php the_title(); ?></h3>
-                        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
-                        <?php the_category(); ?>
+                        <h3 class="global clr-agencement-ternaire"><?php the_title(); ?></h3>
+                        <p><?php echo wp_trim_words(get_the_content(),10); ?></p>
                         <!-- ajoute un lien vers l'article -->
                         <a href="<?php the_permalink(); ?>">Suite</a>
+                        <?php the_category(); ?>
+                    
                     </div>
                 <?php endwhile ?>
                 <?php endif; ?>
                 </div>
-            
+            <br>
             <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit, optio exercitationem quos unde excepturi. Alias, aspernatur. Culpa expedita modi, rem, distinctio enim placeat tempora officia mollitia, odit vitae soluta."</blockquote>
         </section>
     </div>

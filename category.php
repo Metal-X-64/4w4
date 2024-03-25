@@ -2,24 +2,23 @@
 
     <div id="accueil" class="global">
         <section>
-            <h2>Destination par catégorie</h2>
+            <h2>Destinations par catégorie</h2>
             <div class="destinations">
             <?php
                 if (have_posts()):
                     while(have_posts()): the_post(); ?>
                     <div class="carte">
-                        <h3><?php the_title(); ?></h3>
+                        <h3 class="global clr-agencement-ternaire"><?php the_title(); ?></h3>
                         <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
-                        <?php the_category(); ?>
                         <!-- ajoute un lien vers l'article -->
                         <a href="<?php the_permalink(); ?>">Suite</a>
+                        <?php the_category(); ?>
+                        
                     </div>
                 <?php endwhile ?>
                 <?php endif; ?>
                 </div>
             
-            <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit, optio exercitationem quos unde excepturi. Alias, aspernatur. Culpa expedita modi, rem, distinctio enim placeat tempora officia mollitia, odit vitae soluta."</blockquote>
-
         </section>
     </div>
     <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
