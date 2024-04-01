@@ -1,5 +1,7 @@
 a {
     color: var(--couleur-lien);
+    text-decoration: none;
+    font-size: small;
 }
 
 a:visited {
@@ -8,4 +10,8 @@ a:visited {
 
 a:hover {
     color: var(--couleur-lien-hover);
+}
+
+.carte > a {
+    color: var(--couleur-lien-single);
 }

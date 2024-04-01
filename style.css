@@ -10,23 +10,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: themesamuelgiroux
 */
 /* https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/ */
+/* Initialisation des variables Sass et css */
+/* Variable Sass */
+/* palette de couleurs */
+/* À partir des variables de couleurs de la palette choisie
+on crée un mapping en catégorisant les différentes couleurs,
+Ce map contient un map principal et plusieur sous-map */
+/* Agencement de couleurs */
 :root {
-  /*
-  --couleur-arriere-entete : rgb(59, 124, 181, 1);;
-  --couleur-arriere-accueil : rgb(8, 205, 14, 1);
-  --couleur-arriere-evenement : rgba(166, 3, 215, 1);
-  --couleur-arriere-galerie : rgba(255, 162, 0, 1);
-  --couleur-arriere-footer : rgba(167, 44, 0, 1);
-
-  /*Niveau de transparence des h
-  --transparence-h1: 0,4;
-  // Transparence section
-  --transparence-section : 0.1;
-
-  // Largeur de la zone centrale
-  --largeur-zone-centrale : 1;
-
-  */
   --hu1: 180;
   --hu2: calc(var(--hu1) + 30);
   --hu3: calc(var(--hu1) - 20);
@@ -35,41 +26,191 @@ Text Domain: themesamuelgiroux
   --s-avant: 50%;
   --l-arriere: 30%;
   --l-avant: 20%;
-  /*// couleur arrière plan - background-color
-  --couleur-arriere-entete : hsl(var(--hu1),var(--s-arriere), var(--l-arriere));
-  // --couleur-arriere-accueil : hsl(var(--u2),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-accueil: hsl(var(--hu2),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement : hsl(var(--hu3),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-galerie : hsl(var(--hu4),var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer : hsl(var(--hu1),var(--s-arriere), var(--l-arriere));*/
-  /*--couleur-entete : hsl(var(--hu1),var(--s-avant), var(--l-avant));
-  --couleur-accueil : hsl(var(--hu2),var(--s-avant), var(--l-avant));
-  --couleur-evenement : hsl(var(--hu3),var(--s-avant), var(--l-avant));
-  --couleur-galerie : hsl(var(--hu4),var(--s-avant), var(--l-avant));
-  --couleur-footer : hsl(var(--hu1),var(--s-avant), var(--l-avant));*/
+  --couleur-arriere-menu: hsl(var(--hu2), 100%, 30%);
   --couleur-arriere-entete: hsl(var(--hu1), 100%, 70%);
   --couleur-arriere-accueil: hsl(var(--hu2), 100%, 40%);
-  --couleur-arriere-footer: hsl(var(--hu1), 100%, 70%);
+  --couleur-arriere-footer: hsl(var(--hu2), 100%, 20%);
   --couleur-arriere-evenement: var(--couleur-arriere-accueil);
   --couleur-arriere-galerie: var(--couleur-arriere-accueil);
-  --couleur-entete: hsl(var(--hu1), 100%, 20%);
+  --couleur-entete: hsl(var(--hu2), 100%, 20%);
   --couleur-accueil: hsl(var(--hu2), 100%, 85%);
-  --couleur-evenement: hsl(var(--hu3), 100%, 30%);
-  --couleur-galerie: hsl(var(--hu4), 100%, 75%);
-  --couleur-footer: hsl(var(--hu1), 100%, 10%);
+  --couleur-evenement: hsl(var(--hu4), 100%, 30%);
+  --couleur-galerie: hsl(var(--hu2), 100%, 20%);
+  --couleur-footer: hsl(var(--hu1), 100%, 50%);
   --couleur-blockquote: hsl(var(--hu2), 100%, 60%);
   --couleur-arriere-diagonal: hsl(var(--hu2), 100%, 80%);
   --couleur-lien: hsl(var(--hu2), 100%, 60%);
-  --couleur-lien-hover: hsl(var(--hu2), 100%, 50%);
+  --couleur-lien-hover: hsl(var(--hu3), 100%, 50%);
   --couleur-lien-visited: hsl(var(--hu2), 100%, 70%);
   --couleur-menu: hsl(var(--hu4), 100%, 75%);
-  --couleur-arriere-menu: hsl(var(--hu2), 100%, 30%);
   --couleur-menu-hover: hsl(var(--hu2), 100%, 50%);
+  --couleur-lien-single: hsl(var(--hu1), 100%, 50%);
 }
 
+/* Variable local */
 .carte {
   --_couleur: hsl(var(--hu2), 100%, 80%);
   --_couleur-arriere: hsl(var(--hu2), 100%, 50%);
+  --_couleur-nb-articles: hsl(var(--hu4), 100%, 80%);
+}
+
+#entete {
+  --_couleur-arriere-vague: var(--couleur-arriere-accueil);
+}
+
+#galerie {
+  --_couleur-arriere-vague: var(--couleur-arriere-footer);
+}
+
+/* Création des class de couleurs */
+/* Création de classe de couleur */
+.clr-primaire-100 {
+  color: hsl(220, 100%, 85%);
+}
+
+.bck-primaire-100 {
+  background-color: hsl(220, 100%, 85%);
+}
+
+.clr-primaire-200 {
+  color: hsl(220, 100%, 60%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(220, 100%, 60%);
+}
+
+.clr-primaire-300 {
+  color: hsl(220, 100%, 30%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(220, 100%, 30%);
+}
+
+.clr-primaire-400 {
+  color: hsl(220, 100%, 15%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(220, 100%, 15%);
+}
+
+.clr-secondaire-100 {
+  color: hsl(179, 100%, 65%);
+}
+
+.bck-secondaire-100 {
+  background-color: hsl(179, 100%, 65%);
+}
+
+.clr-secondaire-200 {
+  color: hsl(188, 100%, 50%);
+}
+
+.bck-secondaire-200 {
+  background-color: hsl(188, 100%, 50%);
+}
+
+.clr-secondaire-300 {
+  color: hsl(195, 100%, 35%);
+}
+
+.bck-secondaire-300 {
+  background-color: hsl(195, 100%, 35%);
+}
+
+.clr-secondaire-400 {
+  color: hsl(191, 100%, 19%);
+}
+
+.bck-secondaire-400 {
+  background-color: hsl(191, 100%, 19%);
+}
+
+.clr-ternaire-100 {
+  color: hsl(172, 100%, 76%);
+}
+
+.bck-ternaire-100 {
+  background-color: hsl(172, 100%, 76%);
+}
+
+.clr-ternaire-200 {
+  color: hsl(174, 100%, 46%);
+}
+
+.bck-ternaire-200 {
+  background-color: hsl(174, 100%, 46%);
+}
+
+.clr-ternaire-300 {
+  color: hsl(177, 100%, 31%);
+}
+
+.bck-ternaire-300 {
+  background-color: hsl(177, 100%, 31%);
+}
+
+.clr-ternaire-400 {
+  color: hsl(175, 100%, 15%);
+}
+
+.bck-ternaire-400 {
+  background-color: hsl(175, 100%, 15%);
+}
+
+.clr-mauve-bleu-100 {
+  color: hsl(244, 100%, 72%);
+}
+
+.bck-mauve-bleu-100 {
+  background-color: hsl(244, 100%, 72%);
+}
+
+.clr-mauve-bleu-200 {
+  color: hsl(262, 100%, 59%);
+}
+
+.bck-mauve-bleu-200 {
+  background-color: hsl(262, 100%, 59%);
+}
+
+.clr-mauve-bleu-300 {
+  color: hsl(259, 100%, 42%);
+}
+
+.bck-mauve-bleu-300 {
+  background-color: hsl(259, 100%, 42%);
+}
+
+.clr-mauve-bleu-400 {
+  color: hsl(250, 100%, 19%);
+}
+
+.bck-mauve-bleu-400 {
+  background-color: hsl(250, 100%, 19%);
+}
+
+/* Mixin pour agencer des couleurs */
+.clr-agencement-primaire {
+  color: hsl(220, 100%, 85%);
+  background-image: linear-gradient(90deg, hsl(220, 100%, 15%), hsl(220, 100%, 30%));
+}
+
+.clr-agencement-secondaire {
+  color: hsl(179, 100%, 65%);
+  background-image: linear-gradient(90deg, hsl(195, 100%, 35%), hsl(179, 100%, 65%));
+}
+
+.clr-agencement-ternaire {
+  color: hsl(172, 100%, 76%);
+  background-image: linear-gradient(90deg, hsl(175, 100%, 15%), hsl(177, 100%, 31%));
+}
+
+.clr-agencement-mauve-bleu {
+  color: hsl(244, 100%, 72%);
+  background-image: linear-gradient(90deg, hsl(259, 100%, 42%), hsl(250, 100%, 19%));
 }
 
 * {
@@ -81,6 +222,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Prompt", sans-serif;
+  overflow-x: hidden;
 }
 
 .global {
@@ -110,28 +252,26 @@ body {
   min-height: 20vh;
 }
 
-/*#menu {
+#menu__entete {
+  position: relative;
+}
 
-}*/
 #entete {
-  background-color: var(--couleur-arriere-entete);
   position: relative;
   color: var(--couleur-entete);
   min-height: 60vh;
 }
 
-header > h1 {
-  box-shadow: 1rem;
-  text-shadow: 5px 4px 2px black;
-}
-
+/* header > h1 {
+    box-shadow: 1rem;
+    text-shadow: 5px 4px 2px black;
+}*/
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-accueil);
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
 }
 
@@ -139,6 +279,10 @@ header > h1 {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
   position: relative;
+}
+
+#galerie > h4 {
+  font-size: 30px;
 }
 
 #footer {
@@ -153,28 +297,9 @@ blockquote {
   background-color: var(--couleur-blockquote);
 }
 
-/* button {
-    padding: 1.7rem;
-    margin: 1rem;
-    border: 2px solid black;
-    background-color: var(--couleur-bouton);
-    border-radius: 1rem;
-    text-align: center;
-
-}
-
-button:hover {
-    padding: 1.7rem;
-    border: 2px solid black;
-    background-color: var(--couleur-bouton-hover);
-    border-radius: 1rem;
-    color: var(--couleur-bouton);
-    cursor: pointer;
-} */
 @media screen and (max-width: 820px) {
   .global > header {
     text-align: center;
-    min-height: 50vh;
   }
   .global > footer {
     text-align: center;
@@ -192,7 +317,7 @@ button:hover {
 @media screen and (max-width: 992px) {
   .entete__header {
     background-position: center;
-    background-position: 50% 40%;
+    background-position: 50% 60%;
   }
 }
 /* ////////////////////////////// */
@@ -237,8 +362,8 @@ button:hover {
   height: 64px;
 }
 
-.vague .shape-fill {
-  fill: #FFFFFF;
+.vague .remplissage {
+  fill: var(--_couleur-arriere-vague);
 }
 
 .diagonal {
@@ -282,15 +407,14 @@ h2 {
 }
 
 h3 {
-  padding-top: 2rem;
   font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: 300;
   font-style: normal;
 }
 
 h4 {
-  font-size: clamp(0.625rem, 0.538rem + 0.4348vi, 0.875rem);
-  font-weight: 250;
+  font-size: 20px;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -326,6 +450,8 @@ button:hover {
 
 a {
   color: var(--couleur-lien);
+  text-decoration: none;
+  font-size: small;
 }
 
 a:visited {
@@ -336,10 +462,14 @@ a:hover {
   color: var(--couleur-lien-hover);
 }
 
+.carte > a {
+  color: var(--couleur-lien-single);
+}
+
 /* ////////////////////////////// */
 /* Composants */
 /* ////////////////////////////// */
-.cours {
+.destinations, .categories {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -355,11 +485,24 @@ a:hover {
   background-color: var(--_couleur-arriere);
   border: 1px solid #aaa;
   padding: 1rem;
+  border-radius: 10px;
+}
+
+.carte > p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.carte > h2 {
+  font-size: 45px;
+  font-weight: 500;
+  border-style: double;
 }
 
 .carte > h3 {
   font-size: 35px;
   font-weight: 500;
+  border-style: double;
 }
 
 .carte > h4 {
@@ -367,7 +510,18 @@ a:hover {
   font-weight: 500;
 }
 
-/* //Rédolution tablette
+.post-categories {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.carte > .nb-articles {
+  color: var(--_couleur-nb-articles);
+}
+
+/* //Résolution tablette
 @media screen and (min-width: 820px) {
 
     .cours {
@@ -423,13 +577,24 @@ Feuille de style du menu principal
   text-align: center;
 }
 
-.menu-principal-container {
-  background-color: var(--couleur-arriere-menu);
-}
-
+/*.menu-principal-container { //nav
+    background-color: var(--couleur-arriere-menu);
+}*/
 .menu {
+  position: absolute;
   display: flex;
   list-style-type: none;
+  flex-direction: column;
+  transform: translateX(500%);
+  z-index: 10;
+}
+@media (min-width: 700px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    display: flex;
+    transform: translateX(0%);
+  }
 }
 
 .menu-item {
@@ -445,4 +610,38 @@ Feuille de style du menu principal
 
 .menu-item:hover {
   background-color: var(--couleur-menu-hover);
+}
+
+/* gestion label #burger l'image svg est dans un label */
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#burger:hover {
+  cursor: pointer;
+}
+
+#chk_burger {
+  display: none;
+}
+
+#chk_burger:checked ~ .menu__header {
+  height: 430px;
+}
+@media (min-width: 700px) {
+  #chk_burger:checked ~ .menu__header {
+    height: 10vh;
+  }
+}
+
+#chk_burger:checked ~ .menu__header .menu {
+  transform: translateX(0%);
 }/*# sourceMappingURL=style.css.map */

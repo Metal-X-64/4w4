@@ -1,39 +1,31 @@
 ## Auteur :
 - Samuel Giroux
 
-# Labo #3
-### Création d'un site WP.
-- Adaptation du thème de exercice #1
-- Création du modèle index.php
-- Création de la branche labo3
-- minimum 3 commits
-- Un Readme.md qui contiendra:
-    - Le nom de l'auteur
-    - L'objectif du labo3
-    - Les réalisations
-    - Un lien vers la github-page
-- Décomposé le titre de chaque cours:
-    - sigle du cours ex: 582-4W4
-    - le titre du cours  ex: Conception d'interface et développement Web
-    - la durée du cours : 90h
+# TP1 - Club de voyage
 
-- Garder les 30 premiers mots de la description du cours.
+Un site web montrant des variétés de catégories de voyages.
 
-### La section galerie affichera la liste des cours du TIM en 4 colonnes.
-- La liste devra s'adapter aux différentes largeurs de fenêtre.
-- Chacune des cartes de cours sera formatés en en utilisant les flex box
+# Exercice 2 (5 points)
 
-### Barème de correction
-- Organisation du code, 3 commits minimum (1 point)
-- Résultat sous forme de github page (0.5 points)
-- Design global de la page (0.5 points)
+- Compléter l'utilisation de couleur avec boucle et mixin (1 point)
+- Changer le titre et la description général du site (0.2 point)
+- Dans la page d'accueil, on voit uniquement les destinations "populaire"
+- Chaque destination contient les catégories associées. (1 point)
+    - Améliorer l'apparence de la liste des catégories (1 point)
+    - Améliorer l'apparence de chacune des cartes (0.5 point)
+- Afficher des cartes de catégories pour l'ensemble des catégories (2 points)
+    - Titre de la catégorie
+    - 10 premiers mots de la description
+    - Un lien permet d'accéder à la liste des destinations de cette catégorie
+    - Le nombre d'articles pour cette catégorie
+- Créer une github-page : index.htm (front-page.php) (1 point)
+    - Ajouter l'adresse de la github-page dans votre readme.
+- Dans le readme.md
+    - le nom de l'auteur
+    - Courte description de votre tp1
+    - Adresse de votre github-page
 
-# Réalisations
-- Décomposition du titre de chaque cours (Séparer le sigle et durée du titre)
-- Création des colonnes de cours dans l'accueil
-- Changement du nombre de colonnes pour chaque résolution d'écran (Téléphone, tablette, ordinateur)
-
-## Lien du site web:
+## Lien du GitHub page :
 https://metal-x-64.github.io/4w4/
 
 

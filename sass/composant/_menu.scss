@@ -9,13 +9,24 @@ Feuille de style du menu principal
     text-align: center;
 }
 
-.menu-principal-container { //nav
+/*.menu-principal-container { //nav
     background-color: var(--couleur-arriere-menu);
-}
+}*/
 
 .menu { //ul
+    position: absolute;
     display: flex;
-    list-style-type: none;
+    list-style-type: none; 
+    flex-direction: column;
+    transform: translateX(500%);
+    z-index: 10;
+    @media (min-width: 700px) {
+        position: static;
+        flex-direction: row;
+        display: flex;
+        transform: translateX(0%);
+    }
+    
 }
 
 .menu-item { //li
@@ -32,3 +43,36 @@ Feuille de style du menu principal
 .menu-item:hover {
     background-color: var(--couleur-menu-hover);
 }
+
+/* gestion label #burger l'image svg est dans un label */
+#burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    @media (min-width: 700px) {
+        display: none;
+    }
+}
+
+#burger:hover {
+    cursor: pointer;
+}
+
+#chk_burger {
+    display: none;
+}
+
+#chk_burger:checked ~ .menu__header {
+    height: 430px;
+
+    @media (min-width: 700px) {
+        height: 10vh;
+    }
+}
+
+#chk_burger:checked ~ .menu__header .menu {
+    transform: translateX(0%);
+}
+

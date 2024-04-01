@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thème du groupe #1</title>
-    <!-- link rel="stylesheet" href="<normalize.css" -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalise.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav id="menu" class="global">
-        <header class="menu__header">
-            <?php wp_nav_menu(array("container" => "nav")); ?>
-        </header>
-    </nav>
+<?php get_header(); ?>
     <div id="entete" class="global">
         <section class="entete__header">
             <h1>Thème du groupe #1 (h1)</h1>
@@ -28,11 +8,8 @@
                 <button>Événements</button>
             </div>
         </section>
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-accueil);"></path>
-            </svg>
-        </div>
+        <!-- vague -->
+        <?php get_template_part("gabarits/vague"); ?>
     </div>
     <div id="accueil" class="global">
         <section>
@@ -50,25 +27,11 @@
                 if (have_posts()):
                     while(have_posts()): the_post();
                     $titre = get_the_title();
-                    $sigle = substr($titre,0,7);
-
-                    $pos_parenthese = strpos($titre, '(');
-                    $duree = substr($titre, $pos_parenthese+1,-1);
-                    $titre = substr($titre,7, $pos_parenthese-7);
-
-                    // $titrecours = substr($titre,7,-6);
-                    // $duree = substr($titre,-6,6);
-
-                    //$titre = 
-                    //strpos()
                     
                     ?>
                     <div class="carte">
-                        <h4><?php echo $sigle; ?></h4>
-                        <!-- <h3><?php echo $titrecours;?></h3> -->
                         <h3><?php echo $titre; ?></h3>
-                        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
-                        <h4>Durée: <?php echo $duree; ?></h4>
+                        <p><?php the_content(); ?></p>
                     </div>
                 <?php endwhile ?>
                 <?php endif; ?>
@@ -92,11 +55,7 @@
             <h4>Photos (h4)</h4>
             <a href="#">Voir plus</a>
         </section>
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-entete);"></path>
-            </svg>
-        </div>
+        <?php get_template_part("gabarits/vague"); ?>
     </div>
     <div id="footer" class="global">
         <footer>

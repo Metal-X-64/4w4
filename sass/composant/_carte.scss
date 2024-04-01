@@ -1,4 +1,4 @@
-.cours {
+.destinations, .categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -14,11 +14,23 @@
     background-color: var(--_couleur-arriere);
     border: 1px solid #aaa;
     padding: 1rem;
+    border-radius: 10px;
+}
+
+.carte > p {
+    font-size: 20px;
+    font-weight: 300;
+}
+.carte > h2 {
+    font-size: 45px;
+    font-weight: 500;
+    border-style: double;
 }
 
 .carte > h3 {
     font-size: 35px;
     font-weight: 500;
+    border-style: double;
 }
 
 .carte > h4 {
@@ -26,7 +38,18 @@
     font-weight: 500;
 }
 
-/* //Rédolution tablette
+.post-categories { // ul de la liste des catégories
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.carte > .nb-articles {
+    color: var(--_couleur-nb-articles);
+}
+
+/* //Résolution tablette
 @media screen and (min-width: 820px) {
 
     .cours {

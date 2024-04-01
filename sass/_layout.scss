@@ -7,6 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Prompt", sans-serif;
+    overflow-x: hidden; 
 }
 
 .global {
@@ -38,21 +39,22 @@ body {
     min-height: 20vh;
 }
 
-/*#menu {
-    
-}*/
+#menu__entete {
+    position: relative;
+    // background-color: var(--couleur-arriere-menu);
+}
 
 #entete {
-    background-color: var(--couleur-arriere-entete);
+    //background-color: var(--couleur-arriere-entete);
     position: relative;
     color: var(--couleur-entete);
     min-height: 60vh;
 }
 
-header > h1 {
+/* header > h1 {
     box-shadow: 1rem;
     text-shadow: 5px 4px 2px black;
-}
+}*/
 
 #accueil{
     background-color: var(--couleur-arriere-accueil);
@@ -60,7 +62,7 @@ header > h1 {
 }
 
 #evenement{
-    background-color: var(--couleur-arriere-evenement);
+    //background-color: var(--couleur-arriere-evenement);
     color :var(--couleur-evenement);
 }
 
@@ -68,6 +70,10 @@ header > h1 {
     background-color: var(--couleur-arriere-galerie);
     color :var(--couleur-galerie);
     position: relative;
+}
+
+#galerie > h4 {
+    font-size: 30px;
 }
 
 #footer{
@@ -83,31 +89,11 @@ blockquote {
     background-color: var(--couleur-blockquote);
 }
 
-/* button {
-    padding: 1.7rem;
-    margin: 1rem;
-    border: 2px solid black;
-    background-color: var(--couleur-bouton);
-    border-radius: 1rem;
-    text-align: center;
-    
-}
-
-button:hover {
-    padding: 1.7rem;
-    border: 2px solid black;
-    background-color: var(--couleur-bouton-hover);
-    border-radius: 1rem;
-    color: var(--couleur-bouton);
-    cursor: pointer;
-} */
-
 //Écran format téléphone/tablette
 @media screen and (max-width: 820px) {
 
     .global > header {
         text-align: center;
-        min-height: 50vh;
     }
 
     .global > footer {
