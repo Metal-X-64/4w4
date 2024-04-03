@@ -18,9 +18,13 @@ Text Domain: themesamuelgiroux
 /* Création des class de couleurs */
 @import "utile/couleurs-class";
 
+@import "utile/flexbox";
+
 @import "layout";
 
 @import "entete";
+
+@import "footer";
 
 /* ////////////////////////////// */
 /* Effets */

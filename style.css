@@ -213,6 +213,16 @@ Ce map contient un map principal et plusieur sous-map */
   background-image: linear-gradient(90deg, hsl(259, 100%, 42%), hsl(250, 100%, 19%));
 }
 
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flexbox__elm {
+  flex: 1 0 150px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -290,20 +300,6 @@ body {
   color: var(--couleur-footer);
 }
 
-.colones-footer {
-  display: flex;
-  align-content: space-between;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.colones-footer > div {
-  padding-left: 4rem;
-  padding-right: 4rem;
-  display: flex;
-  flex-direction: column;
-}
-
 blockquote {
   padding: 1rem;
   font-size: 1.2rem;
@@ -334,6 +330,20 @@ blockquote {
     background-position: 50% 60%;
   }
 }
+.colones-footer {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colones-footer > div {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
 /* ////////////////////////////// */
 /* Effets */
 /* ////////////////////////////// */
@@ -594,6 +604,19 @@ Feuille de style du menu principal
     background-color: var(--couleur-arriere-menu);
 }*/
 .menu {
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    display: flex;
+  }
+}
+
+.menu__header .menu {
   position: absolute;
   display: flex;
   list-style-type: none;
@@ -602,7 +625,7 @@ Feuille de style du menu principal
   z-index: 10;
 }
 @media (min-width: 700px) {
-  .menu {
+  .menu__header .menu {
     position: static;
     flex-direction: row;
     display: flex;
@@ -622,8 +645,13 @@ Feuille de style du menu principal
   align-content: center;
 }
 
-.menu-item:hover {
+.menu__header .menu-item:hover {
   background-color: var(--couleur-menu-hover);
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
 }
 
 /* gestion label #burger l'image svg est dans un label */
