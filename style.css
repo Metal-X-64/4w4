@@ -290,6 +290,20 @@ body {
   color: var(--couleur-footer);
 }
 
+.colones-footer {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.colones-footer > div {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
 blockquote {
   padding: 1rem;
   font-size: 1.2rem;
@@ -574,7 +588,6 @@ Feuille de style du menu principal
 #menu {
   background-color: var(--couleur-arriere-menu);
   color: var(--couleur-menu);
-  text-align: center;
 }
 
 /*.menu-principal-container { //nav
@@ -606,6 +619,7 @@ Feuille de style du menu principal
   color: var(--couleur-menu);
   text-decoration: none;
   font-size: 20px;
+  align-content: center;
 }
 
 .menu-item:hover {

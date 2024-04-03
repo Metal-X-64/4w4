@@ -5,8 +5,6 @@ Feuille de style du menu principal
 #menu {
     background-color: var(--couleur-arriere-menu);
     color: var(--couleur-menu);
-
-    text-align: center;
 }
 
 /*.menu-principal-container { //nav
@@ -38,6 +36,7 @@ Feuille de style du menu principal
     color: var(--couleur-menu);
     text-decoration: none;
     font-size: 20px;
+    align-content: center;
 }
 
 .menu-item:hover {
