@@ -24,5 +24,6 @@
             <?php wp_nav_menu(array(
                 "menu" => "principal",
                 "container" => "nav")); ?>
+                <?php get_search_form(); ?>
         </header>
     </div>
