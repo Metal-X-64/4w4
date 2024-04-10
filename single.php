@@ -7,6 +7,7 @@
                     $titre = get_the_title();
                     ?>
                     <div class="carte">
+                        <?php the_post_thumbnail('large'); ?>
                         <h2 class="global clr-agencement-ternaire"><?php the_title(); ?></h2>
                         <p><?php the_content(); ?></p>
                     </div>
