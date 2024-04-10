@@ -1,7 +1,7 @@
 ## Auteur :
 - Samuel Giroux
 
-# TP1 - Club de voyage
+# TP2 - Club de voyage
 
 Un site web montrant des variétés de catégories de voyages.
 
