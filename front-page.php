@@ -28,6 +28,9 @@
                         $nbArticles = $category -> count;
                 ?>
                 <div class="carte">
+                    <?php 
+                    // permet d'afficher l'image de l'article qui a été publié
+                    the_post_thumbnail('thumbnail'); ?>
                     <h3 class="global clr-agencement-ternaire"><?php echo $nomCat; ?></h3> 
                     <p><?php echo wp_trim_words($description, 10); ?></p>
                     <a href="/4w4/category/<?php echo $slug; ?>/">Suite</a>
