@@ -91,11 +91,20 @@ blockquote {
 
 #erreur_404 {
     color: var(--couleur-entete);
+    /*background-image: url("images/image-voyage.png");
+    background-repeat: no-repeat;
+    background-position: 80% 50%;*/
+    
+}
+
+#erreur_404 > div {
+    padding: 1rem;
 }
 
 #erreur_404 > h2 {
     color: var(--couleur-entete);
 }
+
 
 .bouton_erreur {
     font-size: clamp(1.125rem, 0.5rem + 2vw, 1.875rem);
@@ -126,5 +135,20 @@ blockquote {
     header > .espace {
         padding-top: 12rem;
     }
+
+    #message_erreur {
+        justify-content: center;
+    }
+
+    .erreur-image {
+        display: none;
+    }
+
+    /*#erreur_404 {
+        color: var(--couleur-entete);
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: 80% 50%;
+    }*/
 
 }

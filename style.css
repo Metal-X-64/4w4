@@ -309,6 +309,13 @@ blockquote {
 
 #erreur_404 {
   color: var(--couleur-entete);
+  /*background-image: url("images/image-voyage.png");
+  background-repeat: no-repeat;
+  background-position: 80% 50%;*/
+}
+
+#erreur_404 > div {
+  padding: 1rem;
 }
 
 #erreur_404 > h2 {
@@ -339,6 +346,18 @@ blockquote {
   header > .espace {
     padding-top: 12rem;
   }
+  #message_erreur {
+    justify-content: center;
+  }
+  .erreur-image {
+    display: none;
+  }
+  /*#erreur_404 {
+      color: var(--couleur-entete);
+      background-image: none;
+      background-repeat: no-repeat;
+      background-position: 80% 50%;
+  }*/
 }
 .entete__header {
   background-image: url("images/image-voyage.png");
