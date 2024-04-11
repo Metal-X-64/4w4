@@ -4,6 +4,15 @@ a {
     font-size: small;
 }
 
+#categories_erreur > a {
+    color: var(--couleur-entete);
+    padding: 5px;
+}
+
+#categories_erreur > a:hover {
+    color: var(--couleur-lien-hover);
+}
+
 a:visited {
     color: var(--couleur-lien-visited);
 }

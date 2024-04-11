@@ -91,6 +91,7 @@ blockquote {
 
 #erreur_404 {
     color: var(--couleur-entete);
+    text-align: center;
     /*background-image: url("images/image-voyage.png");
     background-repeat: no-repeat;
     background-position: 80% 50%;*/
@@ -137,7 +138,11 @@ blockquote {
     }
 
     #message_erreur {
-        justify-content: center;
+        align-content: center;
+    }
+
+    #categories_erreur {
+        display: flex;
     }
 
     .erreur-image {

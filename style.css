@@ -309,6 +309,7 @@ blockquote {
 
 #erreur_404 {
   color: var(--couleur-entete);
+  text-align: center;
   /*background-image: url("images/image-voyage.png");
   background-repeat: no-repeat;
   background-position: 80% 50%;*/
@@ -347,7 +348,10 @@ blockquote {
     padding-top: 12rem;
   }
   #message_erreur {
-    justify-content: center;
+    align-content: center;
+  }
+  #categories_erreur {
+    display: flex;
   }
   .erreur-image {
     display: none;
@@ -517,6 +521,15 @@ a {
   color: var(--couleur-lien);
   text-decoration: none;
   font-size: small;
+}
+
+#categories_erreur > a {
+  color: var(--couleur-entete);
+  padding: 5px;
+}
+
+#categories_erreur > a:hover {
+  color: var(--couleur-lien-hover);
 }
 
 a:visited {
