@@ -1,7 +1,7 @@
 ## Auteur :
 - Samuel Giroux
 
-# TP2 - Club de voyage
+# Examen Intra
 
 Un site web montrant des variétés de catégories de voyages.
 

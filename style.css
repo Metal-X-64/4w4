@@ -307,6 +307,28 @@ blockquote {
   background-color: var(--couleur-blockquote);
 }
 
+#erreur_404 {
+  color: var(--couleur-entete);
+}
+
+#erreur_404 > h2 {
+  color: var(--couleur-entete);
+}
+
+.bouton_erreur {
+  font-size: clamp(1.125rem, 0.5rem + 2vw, 1.875rem);
+  padding: 12px 24px;
+  background-image: linear-gradient(120deg, #e8cf54, #d48701);
+  transition: transform 0.2s;
+  transform: translateY(0);
+  color: var(--couleur-entete);
+}
+
+.bouton_erreur:hover {
+  background-image: linear-gradient(120deg, #e87e54, #d44e01);
+  transform: translateY(2.5px);
+}
+
 @media screen and (max-width: 820px) {
   .global > header {
     text-align: center;
@@ -469,7 +491,7 @@ button {
 
 button:hover {
   background-image: linear-gradient(120deg, #e87e54, #d44e01);
-  transform: translateY(-10px);
+  transform: translateY(2.5px);
 }
 
 a {
@@ -488,6 +510,14 @@ a:hover {
 
 .carte > a {
   color: var(--couleur-lien-single);
+}
+
+#erreur_404 > a {
+  color: var(--couleur-entete);
+}
+
+#erreur_404 > a:visited {
+  color: var(--couleur-entete);
 }
 
 /* ////////////////////////////// */

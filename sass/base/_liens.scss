@@ -15,3 +15,11 @@ a:hover {
 .carte > a {
     color: var(--couleur-lien-single);
 }
+
+#erreur_404 > a  {
+    color: var(--couleur-entete);
+}
+
+#erreur_404 > a:visited  {
+    color: var(--couleur-entete);
+}
