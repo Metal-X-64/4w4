@@ -4,12 +4,12 @@ a {
     font-size: small;
 }
 
-#categories_erreur > a {
+.categories-erreur > a {
     color: var(--couleur-entete);
     padding: 5px;
 }
 
-#categories_erreur > a:hover {
+.categories-erreur > a:hover {
     color: var(--couleur-lien-hover);
 }
 
@@ -25,10 +25,10 @@ a:hover {
     color: var(--couleur-lien-single);
 }
 
-#erreur_404 > a  {
+#erreur-404 > a  {
     color: var(--couleur-entete);
 }
 
-#erreur_404 > a:visited  {
+#erreur-404 > a:visited  {
     color: var(--couleur-entete);
 }

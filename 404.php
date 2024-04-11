@@ -2,7 +2,7 @@
 
 <!-- ////////////////// Contenu principal /////////////////// -->
     <div id="erreur_404" class="global clr-agencement-secondaire">
-        <div id="message_erreur">
+        <div class="message-erreur">
             <div>
                 <h2>Erreur 404</h2>
                 <h4>Vous essayez d'accéder à une page qui n'existent pas.</h4>
@@ -10,11 +10,11 @@
             </div>
             <br>
             <div>
-                <a class="bouton_erreur" href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('name'); ?></a>
+                <a class="bouton-erreur" href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('name'); ?></a>
             </div>
             <?php get_search_form(); ?>
             <br>
-            <div id="categories_erreur">
+            <div id="categories-erreur" class="categories-erreur">
                 <a href="/4w4/category/aventure/">Aventure</a>
                 <a href="/4w4/category/croisiere/">Croisière</a>
                 <a href="/4w4/category/culturel/">Culturel</a>
