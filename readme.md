@@ -3,7 +3,7 @@
 
 # Examen Intra
 
-Un site web montrant des variétés de catégories de voyages.
+Création d'un modèle pour l'erreur 404.
 
 ## Lien du site sur l'hébergeur "WHC"
 https://gftnth00.mywhc.ca/tim16/
