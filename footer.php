@@ -41,5 +41,6 @@ Ce gabarit est appelé à la fin de chacun des modèles de thème
             <a href="#">Retour vers le haut</a>
         </footer>
     </div>
+    <?php wp_footer(); ?>
 </body>
 </html>
