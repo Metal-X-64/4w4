@@ -1,9 +1,14 @@
 ## Auteur :
 - Samuel Giroux
 
-# Examen Intra
+# Labo 3
 
-Création d'un modèle pour l'erreur 404.
+Développer une extension « Carrousel » ce carrousel permettra d'afficher dans une boîte modale les images d'une galerie.
+Des radio boutons permettront d'afficher les différentes images de la galerie.
+
+- Dépôt carrousel branche tp2
+- un readme.md
+- le carrousel est déployer sur whc.ca
 
 ## Lien du site sur l'hébergeur "WHC"
 https://gftnth00.mywhc.ca/tim16/
