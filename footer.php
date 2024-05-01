@@ -16,7 +16,7 @@ Ce gabarit est appelé à la fin de chacun des modèles de thème
                 <div>
                     <h3>Besoin d'aide?</h3>
                     <a href="#">Aide et assistance</a>
-                    <a href="https://www.google.com/">Recherche</a>
+                    <?php get_search_form(); ?>
                 </div>
                 <div class="flexbox__sites">
                 

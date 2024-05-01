@@ -6,7 +6,7 @@
             <h2><?php echo get_bloginfo("description"); ?></h2>
             <h3>TIM-Collège de Maisoneuve</h3>
             <div class="espace">
-                <button>Événements</button>
+                <button class="grand-bouton">Événements</button>
             </div>
 
             
@@ -63,7 +63,7 @@
     <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
         <section>
             <h2>Événement (h2)</h2>
-            <button>
+            <button class="grand-bouton">
                 Cliquez ici pour voir les événements (button)
             </button>
         </section>
