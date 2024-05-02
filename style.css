@@ -35,7 +35,7 @@ Ce map contient un map principal et plusieur sous-map */
   --couleur-entete: hsl(var(--hu2), 100%, 20%);
   --couleur-accueil: hsl(var(--hu2), 100%, 85%);
   --couleur-evenement: hsl(var(--hu4), 100%, 30%);
-  --couleur-galerie: hsl(var(--hu2), 100%, 20%);
+  --couleur-galerie: hsl(var(--hu2), 100%, 85%);
   --couleur-footer: hsl(var(--hu1), 100%, 50%);
   --couleur-blockquote: hsl(var(--hu2), 100%, 60%);
   --couleur-arriere-diagonal: hsl(var(--hu2), 100%, 80%);

@@ -16,29 +16,7 @@
     </div>
     <div id="accueil" class="global">
         <section>
-            <h2>Accueil (h2)</h2>
-            <br>
-            <h3>Catégories de voyages</h3>
-            <div class="categories">
-                <?php 
-                    foreach((get_categories()) as $category) :
-                        $slug = $category -> slug;
-                        $nomCat = $category -> name;
-                        $description = $category -> description;
-                        $nbArticles = $category -> count;
-                ?>
-                <div class="carte">
-                    <?php 
-                    // permet d'afficher l'image de l'article qui a été publié
-                    the_post_thumbnail('thumbnail'); ?>
-                    <h3 class="global clr-agencement-ternaire"><?php echo $nomCat; ?></h3> 
-                    <p><?php echo wp_trim_words($description, 10); ?></p>
-                    <a href="/4w4/category/<?php echo $slug; ?>/">Suite</a>
-                    <p class="nb-articles"><?php echo $nbArticles; ?> articles</p>
-                    
-                </div>
-                <?php endforeach ?>
-            </div>
+            <h2>Accueil</h2>
             <br>
             <h3>Destinations populaires</h3>
             <div class="destinations">
@@ -56,23 +34,39 @@
                 <?php endwhile ?>
                 <?php endif; ?>
                 </div>
-            <br>
-            <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit, optio exercitationem quos unde excepturi. Alias, aspernatur. Culpa expedita modi, rem, distinctio enim placeat tempora officia mollitia, odit vitae soluta."</blockquote>
         </section>
     </div>
     <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
         <section>
-            <h2>Événement (h2)</h2>
+            <h2>Événement</h2>
             <button class="grand-bouton">
                 Cliquez ici pour voir les événements (button)
             </button>
         </section>
     </div>
-    <div id="galerie" class="global clr-agencement-secondaire">
+    <div id="galerie" class="global">
         <section>
-            <h2>Galerie (h2)</h2>
-            <h4>Photos (h4)</h4>
-            <a href="#">Voir plus</a>
+            <h2>Catégories de voyages</h2>
+                <article class="categories">
+                    <?php
+                        $categories = get_categories();
+                        foreach($categories as $elm_categorie) :
+                            $nom = $elm_categorie->name; 
+                            $description = wp_trim_words($elm_categorie->description, 10); 
+                            $nombre_destination = $elm_categorie->count;
+                            $categorie_url = get_category_link($elm_categorie->term_id);
+                    ?>
+                    <div class="carte">
+                        <?php 
+                        // permet d'afficher l'image de l'article qui a été publié
+                        the_post_thumbnail('thumbnail'); ?>
+                        <h3 class="global clr-agencement-ternaire"><?php echo $nom; ?></h3> 
+                        <p><?php echo wp_trim_words($description, 10); ?></p>
+                        <a href="<?php echo  $categorie_url ?>"> Voir les destinations ... </a>
+                        <p class="nb-articles"><?php echo $nombre_destination; ?> articles</p>
+                    </div>
+                    <?php endforeach ?>
+                    </article>
         </section>
         <?php get_template_part("gabarits/vague"); ?>
     </div>
