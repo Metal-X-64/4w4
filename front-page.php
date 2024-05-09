@@ -38,9 +38,15 @@
     </div>
     <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
         <section>
-            <h2>Événement</h2>
+            <h2>Descriptions de certaines villes</h2>
+            
+            <?php
+            // Appel du shortcode directement dans le fichier front-page.php
+            echo do_shortcode('[em_destination]');
+            ?>
+
             <button class="grand-bouton">
-                Cliquez ici pour voir les événements (button)
+                Cliquez ici pour voir les événements
             </button>
         </section>
     </div>

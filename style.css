@@ -565,7 +565,6 @@ a:hover {
 .carte {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex: 1 0 205px;
   color: var(--_couleur);
   background-color: var(--_couleur-arriere);

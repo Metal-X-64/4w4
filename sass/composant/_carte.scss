@@ -8,7 +8,6 @@
 .carte {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex: 1 0 calc(820px/4);
     color: var(--_couleur);
     background-color: var(--_couleur-arriere);
