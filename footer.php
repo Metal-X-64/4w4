@@ -18,15 +18,14 @@ Ce gabarit est appelé à la fin de chacun des modèles de thème
                     <a href="#">Aide et assistance</a>
                     <?php get_search_form(); ?>
                 </div>
-                <div class="flexbox__sites">
-                
-                </div>
                 <div>
                     <h3>Nous trouver</h3>
-                    <a href="https://www.facebook.com/">Facebook</a>
-                    <a href="https://www.twitter.com/">Twitter</a>
-                    <a href="https://www.youtube.com/">YouTube</a>
-                    <a href="https://www.instagram.com/">Instagram</a>
+                    <div class="icones__svg">
+                        <a href="https://www.facebook.com/"><img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000" width="32" height="32"></a>
+                        <a href="https://www.twitter.com/"><img src="https://s2.svgbox.net/social.svg?ic=twitter&color=000" width="32" height="32"></a>
+                        <a href="https://www.youtube.com/"><img src="https://s2.svgbox.net/social.svg?ic=youtube&color=000" width="32" height="32"></a>
+                        <a href="https://www.instagram.com/"><img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="32" height="32"></a>
+                    </div>
                 </div>
 
             </div>
