@@ -23,14 +23,12 @@
             <?php
                 if (have_posts()):
                     while(have_posts()): the_post(); ?>
-                    <div class="carte">
-                        <h3 class="global clr-agencement-ternaire"><?php the_title(); ?></h3>
-                        <p><?php echo wp_trim_words(get_the_content(),10); ?></p>
-                        <!-- ajoute un lien vers l'article -->
-                        <a href="<?php the_permalink(); ?>">Suite</a>
-                        <?php the_category(); ?>
-                    
-                    </div>
+                    <?php
+                    $ma_carte = "carte";
+                    if (in_category('galerie')) {
+                        $ma_carte = "galerie";
+                    }
+                    get_template_part("gabarits/categorie", $ma_carte); ?>
                 <?php endwhile ?>
                 <?php endif; ?>
                 </div>

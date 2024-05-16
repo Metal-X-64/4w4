@@ -21,21 +21,5 @@
             
         </section>
     </div>
-    <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
-        <section>
-            <h2>Événement (h2)</h2>
-            <button>
-                Cliquez ici pour voir les événements (button)
-            </button>
-        </section>
-    </div>
-    <div id="galerie" class="global clr-agencement-secondaire">
-        <section>
-            <h2>Galerie (h2)</h2>
-            <h4>Photos (h4)</h4>
-            <a href="#">Voir plus</a>
-        </section>
-        <?php get_template_part("gabarits/vague"); ?>
-    </div>
     <?php get_footer(); ?>
     
