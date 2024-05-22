@@ -17,12 +17,12 @@
     border-radius: 10px;
     transform: scale(100%);
     transition: transform 0.2s;
+    z-index: 2;
 }
 
 // Animation de la carte lorsque la souris est sur la carte
 .carte:hover {
     transform: scale(105%);
-    z-index: 10;
     border: 3px solid #0000b9;
 }
 
