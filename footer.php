@@ -36,6 +36,24 @@ Ce gabarit est appelé à la fin de chacun des modèles de thème
                         "menu" => "footer",
                         "container" => "nav")); ?>
             </section>
+            <br>
+            <section class="colones-footer">
+                <div>
+                    <h4>Auteur</h4>
+                    <p>Samuel Giroux</p>
+                </div>
+                <div>
+                    <a href="https://github.com/Metal-X-64/4w4/tree/tp2">GitHub Brache TP2</a>
+                    <a href="https://metal-x-64.github.io/4w4/">GitHub page</a>
+                </div>
+                <div>
+                    <h4>Description</h4>
+                    <p>Site web de voyages</p>
+                </div>
+                <div>
+                    <?php $image_url = wp_get_attachment_image_url( $image_id, 'full' ); ?>
+                </div>
+            </section>
             
             <a href="#">Retour vers le haut</a>
         </footer>

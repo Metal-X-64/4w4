@@ -6,7 +6,7 @@
             <h2><?php echo get_bloginfo("description"); ?></h2>
             <h3>TIM-Collège de Maisoneuve</h3>
             <div class="espace">
-                <a href="https://gftnth00.mywhc.ca/tim16/conference/" class="grand-bouton">Conférence</a>
+                <a href="http://localhost:8081/4w4/conference/" class="grand-bouton">Conférence</a>
             </div>
 
             
