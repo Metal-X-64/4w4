@@ -5,9 +5,17 @@
             <h1><?php echo get_bloginfo("name"); ?></h1>
             <h2><?php echo get_bloginfo("description"); ?></h2>
             <h3>TIM-Collège de Maisoneuve</h3>
+            <br>
             <div class="espace">
                 <a href="http://localhost:8081/4w4/conference/" class="grand-bouton">Conférence</a>
             </div>
+            <br>
+            <div class="icones__svg_hero">
+                        <a href="https://www.facebook.com/"><img src="https://s2.svgbox.net/social.svg?ic=facebook&color=000" width="32" height="32"></a>
+                        <a href="https://www.twitter.com/"><img src="https://s2.svgbox.net/social.svg?ic=twitter&color=000" width="32" height="32"></a>
+                        <a href="https://www.youtube.com/"><img src="https://s2.svgbox.net/social.svg?ic=youtube&color=000" width="32" height="32"></a>
+                        <a href="https://www.instagram.com/"><img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000" width="32" height="32"></a>
+                    </div>
 
             
         </section>
@@ -43,9 +51,9 @@
             echo do_shortcode('[em_destination]');
             ?>
 
-            <button class="grand-bouton">
+            <!--<button class="grand-bouton">
                 Cliquez ici pour voir les événements
-            </button>
+            </button>-->
         </section>
     </div>
     <div id="galerie" class="global">
