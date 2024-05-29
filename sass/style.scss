@@ -1,12 +1,12 @@
 /*
-Theme Name: Theme Samuel
+Theme Name: Theme Samuel TP2
 Author: Samuel Giroux
 Author URI: https://wordpress.org/
 Description: Thème de base
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: themesamuelgiroux
+Text Domain: TP2
 */
 
 /* https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/ */
@@ -18,9 +18,13 @@ Text Domain: themesamuelgiroux
 /* Création des class de couleurs */
 @import "utile/couleurs-class";
 
+@import "utile/flexbox";
+
 @import "layout";
 
 @import "entete";
+
+@import "footer";
 
 /* ////////////////////////////// */
 /* Effets */
