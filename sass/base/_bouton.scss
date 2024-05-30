@@ -24,3 +24,12 @@ a > img {
     justify-content: space-between;
     
 }
+
+.boutons-desc-villes > button {
+    font-size: clamp(1.125rem, 0.5rem + 2vw, 1.875rem);
+    padding: 12px 24px;
+    background-image: linear-gradient(120deg, #54bce8, #0163d4);
+    margin-top: 30px;
+    gap: 1rem;
+    color: white;
+}

@@ -43,7 +43,7 @@
         </section>
     </div>
     <div id="evenement" class="global diagonal clr-agencement-mauve-bleu">
-        <section>
+        <section class="boutons-desc-villes">
             <h2>Descriptions de certaines villes</h2>
             
             <?php

@@ -10,9 +10,10 @@
                     <article class="carte">
                         <h2 class="global clr-agencement-ternaire"><?php the_title(); ?></h2>
                         <p><?php the_content(); ?></p>
-                        <p>Température minimum: <?php the_field('temperature_minimum'); ?></p>
-                        <p>Température maximum: <?php the_field('temperature_maximum'); ?></p>
-                        <p>Ville avoisinante: <?php the_field('ville_avoisinante'); ?></p>
+                        <br>
+                        <p class="champ_Personalise">Température minimum: <?php the_field('temperature_minimum'); ?></p>
+                        <p class="champ_Personalise">Température maximum: <?php the_field('temperature_maximum'); ?></p>
+                        <p class="champ_Personalise">Ville avoisinante: <?php the_field('ville_avoisinante'); ?></p>
                     </article>
                 <?php endif; ?>
              
