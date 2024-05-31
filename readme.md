@@ -7,6 +7,7 @@ Création d'une page de destinations par pays.
 
 ### Modifications apportés :
 - Ajout d'une section contenant un titre, une introduction et une galerie d'images avec le carrousel.
+- Ajout des boutons par pays
 
 ## Lien du site sur l'hébergeur "WHC"
 https://gftnth00.mywhc.ca/tim16/
