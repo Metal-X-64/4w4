@@ -50,10 +50,6 @@
             // Appel du shortcode directement dans le fichier front-page.php
             echo do_shortcode('[em_destination]');
             ?>
-
-            <!--<button class="grand-bouton">
-                Cliquez ici pour voir les événements
-            </button>-->
         </section>
     </div>
     <div id="galerie" class="global">

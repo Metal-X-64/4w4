@@ -17,9 +17,11 @@
     <?php get_template_part("gabarits/vague"); ?>
 </div>
 <div id="galerie" class="global">
-
-    <p>allo</p>
-    <?php get_template_part("gabarits/vague"); ?>
+        <?php
+            // Appel du shortcode directement dans le fichier front-page.php
+            echo do_shortcode('[em_pays]');
+            ?>
+    <!--<?php get_template_part("gabarits/vague"); ?>-->
 </div>
 <?php
 get_footer();
